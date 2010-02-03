@@ -1,0 +1,6 @@
+<h2> Your search results	</h2>
+<ul>
+	<% for result in @results %>
+		<li><%= link_to(result.title, show_feed_path(result.id)) %></li>
+	<% end %>
+<ul>

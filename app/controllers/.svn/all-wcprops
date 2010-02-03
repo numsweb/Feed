@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/john/!svn/ver/2360/feed/app/controllers
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/john/!svn/ver/2356/feed/app/controllers/application.rb
+END
+settings_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/john/!svn/ver/2356/feed/app/controllers/settings_controller.rb
+END
+mailings_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/john/!svn/ver/2356/feed/app/controllers/mailings_controller.rb
+END
+feeds_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/john/!svn/ver/2360/feed/app/controllers/feeds_controller.rb
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/john/!svn/ver/2357/feed/test/functional
+END
+settings_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/john/!svn/ver/2357/feed/test/functional/settings_controller_test.rb
+END
+feed_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/john/!svn/ver/2352/feed/test/functional/feed_controller_test.rb
+END
+mailings_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/john/!svn/ver/2357/feed/test/functional/mailings_controller_test.rb
+END
+feeds_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/john/!svn/ver/2352/feed/test/functional/feeds_controller_test.rb
+END

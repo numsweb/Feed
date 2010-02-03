@@ -1,0 +1,27 @@
+<%= render :partial => "search" %>
+
+<div id="feeds_container">
+	<div id="feeds_list">
+		<%= render :partial => "feeds_list" %>
+	</div>
+
+
+	<div id="show_posting">
+
+	</div>
+
+</div>
+
+
+
+
+<!--
+ <%# form_for :profile, @profile,  :url => mark_feeds_path  do |@f| %>
+	<%#= render :partial => "feeds_list" %>
+	<div id="submit">
+	 <%#= submit_tag 'Remove Marked' %>
+	</div>
+<%# end %>
+-->
+
+

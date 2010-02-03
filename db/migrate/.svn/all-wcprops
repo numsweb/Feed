@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/john/!svn/ver/2356/feed/db/migrate
+END
+003_create_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/john/!svn/ver/2356/feed/db/migrate/003_create_settings.rb
+END
+002_create_mailings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/john/!svn/ver/2356/feed/db/migrate/002_create_mailings.rb
+END
+001_create_feeds.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/john/!svn/ver/2352/feed/db/migrate/001_create_feeds.rb
+END

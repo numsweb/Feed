@@ -1,0 +1,104 @@
+<h3><%= @postings.to_s %> Postings</h1>
+
+<div id="table">
+<p>Note: <font color="green">Green</font> Postings have been marked read, <font color="blue">Blue</font> postings are unread.</p>
+<% form_for :feeds, :url => mark_feeds_path  do |f| %>
+<table>
+		<% unless @web == [] %>
+				<tr><td><h1>Web / Info / Design</h1></td></tr>
+				<% row = false %>
+				<% for web in @web %>
+						<tr class="row_<%= row.to_s %>">
+						<% row = !row %>
+							<td class=<% if web.is_read %>"read"<% else%>"unread"<%end%>>
+								<% if params[:action] == "show_all_feeds" %>
+									<%= link_to_remote(web.title, :url => remote_show_post_path(web.id,"show_all_feeds")) %>
+								<% else %>
+									<%= link_to_remote(web.title, :url => remote_show_post_path(web.id,"show_feeds")) %>
+								<% end %>
+						    </td>
+							<td class="check"><%= check_box_tag "feed_" + web.id.to_s, web.id %></td> </tr>
+				<% end %>
+				<tr><td colspan=2 class="submit">
+				   <%= f.submit "Mark Selected as Read" %>
+				</td>
+				 </tr>
+		<% end %>
+
+		<% unless @eng == [] %>
+				<tr><td><h1>Internet Engineers</h1></td></tr>
+				<% row = false %>
+						<% for eng in @eng %>
+							<tr class="row_<%= row.to_s %>">
+								<% row = !row %>
+								<td class=<% if eng.is_read %>"read"<% else%>"unread"<%end%>>
+								
+									
+									<% if params[:action] == "show_all_feeds" %>
+										<%= link_to_remote(eng.title, :url => remote_show_post_path(eng.id,"show_all_feeds")) %>
+									<% else %>
+										<%= link_to_remote(eng.title, :url => remote_show_post_path(eng.id,"show_feeds")) %>
+									<% end %>
+									
+								</td>
+									 <td class="check"><%= check_box_tag "feed_" + eng.id.to_s, eng.id %></td></tr>
+						<% end %>
+						<tr><td colspan=2 class="submit">
+						   <%= f.submit "Mark Selected as Read" %>
+						 </td></tr>
+		<% end %>
+
+
+
+		<% unless @sof == [] %>
+				<tr><td><h1>Software / QA / DBA</h1></td></tr>
+				<% row = false %>
+				<% for sof in @sof %>
+					<tr class="row_<%= row.to_s %>">
+					<% row = !row %>
+					<td class=<% if sof.is_read %>"read"<% else%>"unread"<%end%>>
+						
+							<% if params[:action] == "show_all_feeds" %>
+								<%= link_to_remote(sof.title, :url => remote_show_post_path(sof.id,"show_all_feeds")) %>
+							<% else %>
+								<%= link_to_remote(sof.title, :url => remote_show_post_path(sof.id,"show_feeds")) %>
+							<% end %>
+							
+					</td>
+						<td class="check"><%= check_box_tag "feed_" + sof.id.to_s, sof.id %></td> </tr>
+				<% end %>
+				<tr><td colspan=2 class="submit">
+				   <%= f.submit "Mark Selected as Read" %>
+				 </td></tr>
+		<% end %>
+
+		<% unless @cpg == [] %>
+				<tr><td><h1>Computer Gigs</h1></td></tr>
+
+
+				<% row = false %>
+				<% for cpg in @cpg %>
+					<tr class="row_<%= row.to_s %>">
+					<% row = !row %>
+					<td class=<% if cpg.is_read %>"read"<% else%>"unread"<%end%>>
+						
+							<% if params[:action] == "show_all_feeds" %>
+								<%= link_to_remote(cpg.title, :url => remote_show_post_path(cpg.id,"show_all_feeds")) %>
+							<% else %>
+								<%= link_to_remote(cpg.title, :url => remote_show_post_path(cpg.id,"show_feeds")) %>
+							<% end %>
+					</td>
+						<td class="check"><%= check_box_tag "feed_" + cpg.id.to_s, cpg.id %></td></tr>
+				<% end %>
+				<tr><td colspan=2 class="submit">
+				   <%= f.submit "Mark Selected as Read" %>
+				 </td></tr>
+		<% end %>
+</table>
+
+
+<% end %>
+
+</div>
+
+

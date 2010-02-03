@@ -1,0 +1,9 @@
+<div id="search">
+
+
+	
+    <% form_for :search,  :url => {:controller => "feeds", :action => "search"}  do |s| %>
+    		Enter the CL item number or part of the title: <%= s.text_field :item, {:size => 40, :onclick => "$('search_item').style.background = '#ccc';" }%> 
+    		<%= submit_tag("search") %>
+	<% end %>
+</div>

@@ -1,0 +1,11 @@
+
+
+<%= error_messages_for :setting %>
+
+<% form_for(@setting) do |f| %>
+  <%= render :partial => "form" , :locals => {:f => f}%>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

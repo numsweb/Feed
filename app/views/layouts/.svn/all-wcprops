@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/john/!svn/ver/2359/feed/app/views/layouts
+END
+feeds.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/john/!svn/ver/2353/feed/app/views/layouts/feeds.html.erb
+END
+settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/john/!svn/ver/2359/feed/app/views/layouts/settings.html.erb
+END
+_nav.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/john/!svn/ver/2356/feed/app/views/layouts/_nav.html.erb
+END
+mailings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/john/!svn/ver/2359/feed/app/views/layouts/mailings.html.erb
+END

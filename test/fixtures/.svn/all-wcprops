@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/john/!svn/ver/2357/feed/test/fixtures
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/john/!svn/ver/2357/feed/test/fixtures/settings.yml
+END
+mailings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/john/!svn/ver/2357/feed/test/fixtures/mailings.yml
+END
+feeds.yml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/john/!svn/ver/2352/feed/test/fixtures/feeds.yml
+END

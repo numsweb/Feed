@@ -1,0 +1,12 @@
+<h1>Editing mailing</h1>
+
+<%= error_messages_for :mailing %>
+
+<% form_for(@mailing) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @mailing %> |
+<%= link_to 'Back', mailings_path %>
