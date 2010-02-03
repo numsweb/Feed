@@ -18,8 +18,8 @@ development:
   adapter: mysql
   encoding: utf8
   database: feed_development
-  username: root
-  password: polack
+  username: rails
+  password: rails_rocks
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as 'test' will be erased and
@@ -29,14 +29,14 @@ test:
   adapter: mysql
   encoding: utf8
   database: feed_test
-  username: root
-  password: polack
+  username: rails
+  password: rails_rocks
   socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
   encoding: utf8
   database: oneoriginalgeek_feeds_production
-  username: jkropka
-  password: sws1polack
-  socket: /tmp/mysql.sock
+  username: rails
+  password: rails_rocks
+
