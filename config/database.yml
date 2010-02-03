@@ -36,7 +36,7 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: feed_development
-  username: root
-  password: polack
+  database: oneoriginalgeek_feeds_production
+  username: jkropka
+  password: sws1polack
   socket: /tmp/mysql.sock

@@ -1,15 +1,14 @@
 set :application, "feed"
-set :repository,  "https://masterwebdesign.dyndns.org/svn/john/feed"
+require 'capistrano/ext/multistage'
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-# set :deploy_to, "/var/www/#{application}"
 
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
-# set :scm, :subversion
+set :stages, %w(staging testing production)
+set :default_stage, 'staging'
+set :keep_releases,       5
 
-role :app, "localhost"
-role :web, "localhost"
-role :db,  "localhost", :primary => true
+#switch to git repo
+set :scm, :git
+set :scm_verbose, true # ubuntu's git doesn't support git reset -q
+set :branch, 'master'
+set :ssh_options, {:forward_agent => true}
+set :repository, "git@github.com:numsweb/Feed.git"

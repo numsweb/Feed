@@ -1,513 +1,0 @@
-
-
-Processing FeedsController#show_feeds (for 127.0.0.1 at 2008-03-02 15:05:02) [GET]
-  Session ID: BAh7CDoOa2VlcF90aW1lIgY1Ogxjc3JmX2lkIiVkNjFlZDA0YzgxODRjZjJk%0AMDE4MTVjYmI1ODQ1ZjcwYiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--51b8dba6e77971e398f027be411fa8f57e81699d
-  Parameters: {"action"=>"show_feeds", "controller"=>"feeds"}
-
-
-ActiveRecord::StatementInvalid (Mysql::Error: Table 'feed_production.settings' doesn't exist: SELECT * FROM `settings`    LIMIT 1):
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/mysql_adapter.rb:481:in `select'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `cache_sql'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:481:in `find_by_sql'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:1160:in `find_every'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:1154:in `find_initial'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:451:in `find'
-    /app/controllers/feeds_controller.rb:116:in `show_feeds'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
-    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
-    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
-    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
-    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
-    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
-    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
-    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    script/server:3
-
-Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
-
-
-Processing FeedsController#show_feeds (for 127.0.0.1 at 2010-02-03 12:38:33) [GET]
-  Session ID: BAh7CDoOa2VlcF90aW1lIgY1Ogxjc3JmX2lkIiU0NDdiYTA2YThiZjExZTNm
-ZTk3ZGM0ODU3MDVkZmQzMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
-Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--0fdc176e631c55c5bb13bfba0ce738591ed85ee2
-  Parameters: {"action"=>"show_feeds", "controller"=>"feeds"}
-Rendering template within layouts/feeds
-Rendering feeds/show_feeds
-Completed in 9.07350 (0 reqs/sec) | Rendering: 0.12948 (1%) | DB: 1.37493 (15%) | 200 OK [http://localhost/show_feeds]
-
-
-Processing FeedsController#remote_show_post (for 127.0.0.1 at 2010-02-03 12:38:47) [POST]
-  Session ID: BAh7CDoOa2VlcF90aW1lIgY1Ogxjc3JmX2lkIiU0NDdiYTA2YThiZjExZTNm
-ZTk3ZGM0ODU3MDVkZmQzMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
-Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--0fdc176e631c55c5bb13bfba0ce738591ed85ee2
-  Parameters: {"authenticity_token"=>"e1f9cb1494e741a7da9dfd17ff411a9bb6347bb5", "action"=>"remote_show_post", "id"=>"1205", "called_from"=>"show_feeds", "controller"=>"feeds"}
-
-
-********* body <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<title>Web designer needed for video game company</title>
-	<meta name="robots" content="NOARCHIVE,NOFOLLOW">
-	<link rel="stylesheet" title="craigslist" href="http://www.craigslist.org/styles/craigslist.css" type="text/css" media="all">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</head>
-
-<body class="posting">
-
-
-<div class="bchead">
-	<a id="ef" href="/email.friend?postingID=1563840172">email this posting to a friend</a>
-	<a href="http://austin.craigslist.org/">austin craigslist</a> &gt;
-	
-	 <a href="http://austin.craigslist.org/jjj/">jobs</a> &gt;
-    <a href="http://austin.craigslist.org/web/">web/HTML/info design jobs</a>
-</div>
-
-	
-
-	<div id="flags">
-		<div id="flagMsg">
-			please <a href="http://www.craigslist.org/about/help/flags_and_community_moderation">flag</a> with care:
-		</div>
-		<div id="flagChooser">
-			<br>
-			<a class="fl" id="flag16" href="/flag/?flagCode=16&amp;postingID=1563840172"
-				title="Wrong category, wrong site, discusses another post, or otherwise misplaced">
-				miscategorized</a>
-			<br>
-
-			<a class="fl" id="flag28" href="/flag/?flagCode=28&amp;postingID=1563840172"
-				title="Violates craigslist Terms Of Use or other posted guidelines">
-				prohibited</a>
-			<br>
-
-			<a class="fl" id="flag15" href="/flag/?flagCode=15&amp;postingID=1563840172"
-				title="Posted too frequently, in multiple cities/categories, or is too commercial">
-				spam/overpost</a>
-			<br>
-
-			<a class="fl" id="flag9" href="/flag/?flagCode=9&amp;postingID=1563840172"
-				title="Should be considered for inclusion in the Best-Of-Craigslist">
-				best of craigslist</a>
-			<br>
-		</div>
-	</div>
-
-<div id="tsb">
-			<em>Avoid scams and fraud by dealing locally!</em> Beware any deal involving Western Union, Moneygram, wire transfer, cashier check, money order, shipping, escrow, or any promise of transaction protection/certification/guarantee. <a href="http://www.craigslist.org/about/scams.html">More info</a></div>
-<h2>Web designer needed for video game company (Austin, TX)</h2>
-<hr>
-Date: 2010-01-21,  2:11PM CST<br>
-Reply to: <a href="mailto:job-gtshm-1563840172@craigslist.org?subject=Web%20designer%20needed%20for%20video%20game%20company%20(Austin%2C%20TX)&amp;body=%0A%0Ahttp%3A%2F%2Faustin.craigslist.org%2Fweb%2F1563840172.html%0A">job-gtshm-1563840172@craigslist.org</a> <sup>[<a href="http://www.craigslist.org/about/help/replying_to_posts" target="_blank">Errors when replying to ads?</a>]</sup><br>
-<hr>
-<br>
-<div id="userbody">
-Studio Web Designer for Heatwave Interactive <br>
-<br>
-Job Overview <br>
-The web designer will be assigned duties relating to web site creation for Heatwave Interactive. The duties include graphic design as well as website construction and maintenance. Heatwave requires high level competitive artwork, neat, eye catching design, and motion effects to demonstrate a strong and professional online presence. <br>
-<br>
-Availability: Immediate <br>
-Reports to: Brand Manager <br>
-<br>
-Responsibilities <br>
-• Concept web designs including splash pages, corporate websites, and product websites <br>
-• Create graphic assets for websites <br>
-• Integrate websites <br>
-• Create animations and special effects for websites <br>
-• Work with Brand Manager, product Producers and Art Manager to create concepts and see through to final products <br>
-• Graphic design may also include logo design for company and product merchandise <br>
-<br>
-Skills and Knowledge Requirements <br>
-• Photoshop <br>
-• Illustrator <br>
-• Flash <br>
-• HTML <br>
-• Team player, able to communicate issues effectively and solve problems creatively <br>
-<br>
-Qualification Requirements <br>
-• At least five HTML and five Flash websites published <br>
-<br>
-About Heatwave Interactive <br>
-<br>
-Founded in early 2007 by games industry veteran Anthony Castoro (EA, Sony Online Entertainment, Codemasters) and successful entrepreneur Donn Clendenon (MPG-Net, World Gaming Corporation, I-Sun Networks), Heatwave™ Interactive is an entertainment production company developing original and licensed games that crossover to film and television. Staffed by veterans from multiple media industries, Heatwave’s team members are credited with over 50 commercial video games including Wing Commander (series), Battlefield 2 (series), Ultima Online (series), Star Wars (various), Lord of the Rings Online: Shadows of Angmar, and Richard Garriott’s Tabula Rasa. Supporting the Central Studio is a Board of Advisors, including Jason Bell, CEO of Chrysalis Games, formerly of Turbine, Atari, EA, and Kesmai; Ann E. Kronen, formerly of Atari, Humongous Entertainment, Disney, Phillips, and Broderbund Software; and Charles J. Weber, CEO of Weber Communications, formerly of LucasFilm Ltd. <br>
-<br>
-<a href="http://www.heatwave.com" rel="nofollow">http://www.heatwave.com</a> <!-- START CLTAGS -->
-
-
-<br><br><ul class="blurbs">
-<li> <!-- CLTAG GeographicArea=Austin, TX -->Location: Austin, TX
-<li>Principals only. Recruiters, please don't contact this job poster.
-<li>Please, no phone calls about this job!
-<li>Please do not contact job poster about other services, products or commercial interests.</ul>
-<!-- END CLTAGS -->
-		<table summary="craigslist hosted images">
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-			</tr>
-		</table>
-
-</div>
-PostingID: 1563840172<br>
-
-
-<br>
-
-<hr>
-<ul class="clfooter">
-	<li>Copyright &copy; 2010 craigslist, inc.</li>
-	<li><a href="http://www.craigslist.org/about/terms.of.use.html">terms of use</a></li>
-	<li><a href="http://www.craigslist.org/about/privacy_policy">privacy policy</a></li>
-	<li><a href="/forums/?forumID=8">feedback forum</a></li>
-</ul>
-
-<script type="text/javascript" src="http://www.craigslist.org/js/jquery.js"></script>
-<script type="text/javascript" src="http://www.craigslist.org/js/postings.js"></script>
-<script type="text/javascript"><!--
-	pID = 1563840172;
--->
-</script>
-</body>
-</html>
-
- ****
-
-filtering email: "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n\t<title>Web designer needed for video game company</title>\n\t<meta name=\"robots\" content=\"NOARCHIVE,NOFOLLOW\">\n\t<link rel=\"stylesheet\" title=\"craigslist\" href=\"http://www.craigslist.org/styles/craigslist.css\" type=\"text/css\" media=\"all\">\n\t<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n</head>\n\n<body class=\"posting\">\n\n\n<div class=\"bchead\">\n\t<a id=\"ef\" href=\"/email.friend?postingID=1563840172\">email this posting to a friend</a>\n\t<a href=\"http://austin.craigslist.org/\">austin craigslist</a> &gt;\n\t\n\t <a href=\"http://austin.craigslist.org/jjj/\">jobs</a> &gt;\n    <a href=\"http://austin.craigslist.org/web/\">web/HTML/info design jobs</a>\n</div>\n\n\t\n\n\t<div id=\"flags\">\n\t\t<div id=\"flagMsg\">\n\t\t\tplease <a href=\"http://www.craigslist.org/about/help/flags_and_community_moderation\">flag</a> with care:\n\t\t</div>\n\t\t<div id=\"flagChooser\">\n\t\t\t<br>\n\t\t\t<a class=\"fl\" id=\"flag16\" href=\"/flag/?flagCode=16&amp;postingID=1563840172\"\n\t\t\t\ttitle=\"Wrong category, wrong site, discusses another post, or otherwise misplaced\">\n\t\t\t\tmiscategorized</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag28\" href=\"/flag/?flagCode=28&amp;postingID=1563840172\"\n\t\t\t\ttitle=\"Violates craigslist Terms Of Use or other posted guidelines\">\n\t\t\t\tprohibited</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag15\" href=\"/flag/?flagCode=15&amp;postingID=1563840172\"\n\t\t\t\ttitle=\"Posted too frequently, in multiple cities/categories, or is too commercial\">\n\t\t\t\tspam/overpost</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag9\" href=\"/flag/?flagCode=9&amp;postingID=1563840172\"\n\t\t\t\ttitle=\"Should be considered for inclusion in the Best-Of-Craigslist\">\n\t\t\t\tbest of craigslist</a>\n\t\t\t<br>\n\t\t</div>\n\t</div>\n\n<div id=\"tsb\">\n\t\t\t<em>Avoid scams and fraud by dealing locally!</em> Beware any deal involving Western Union, Moneygram, wire transfer, cashier check, money order, shipping, escrow, or any promise of transaction protection/certification/guarantee. <a href=\"http://www.craigslist.org/about/scams.html\">More info</a></div>\n<h2>Web designer needed for video game company (Austin, TX)</h2>\n<hr>\nDate: 2010-01-21,  2:11PM CST<br>\nReply to: <a href=\"mailto:job-gtshm-1563840172@craigslist.org?subject=Web%20designer%20needed%20for%20video%20game%20company%20(Austin%2C%20TX)&amp;body=%0A%0Ahttp%3A%2F%2Faustin.craigslist.org%2Fweb%2F1563840172.html%0A\">job-gtshm-1563840172@craigslist.org</a> <sup>[<a href=\"http://www.craigslist.org/about/help/replying_to_posts\" target=\"_blank\">Errors when replying to ads?</a>]</sup><br>\n<hr>\n<br>\n<div id=\"userbody\">\nStudio Web Designer for Heatwave Interactive \r<br>\n\r<br>\nJob Overview \r<br>\nThe web designer will be assigned duties relating to web site creation for Heatwave Interactive. The duties include graphic design as well as website construction and maintenance. Heatwave requires high level competitive artwork, neat, eye catching design, and motion effects to demonstrate a strong and professional online presence. \r<br>\n\r<br>\nAvailability: Immediate \r<br>\nReports to: Brand Manager \r<br>\n\r<br>\nResponsibilities \r<br>\n\225 Concept web designs including splash pages, corporate websites, and product websites \r<br>\n\225 Create graphic assets for websites \r<br>\n\225 Integrate websites \r<br>\n\225 Create animations and special effects for websites \r<br>\n\225 Work with Brand Manager, product Producers and Art Manager to create concepts and see through to final products \r<br>\n\225 Graphic design may also include logo design for company and product merchandise \r<br>\n\r<br>\nSkills and Knowledge Requirements \r<br>\n\225 Photoshop \r<br>\n\225 Illustrator \r<br>\n\225 Flash \r<br>\n\225 HTML \r<br>\n\225 Team player, able to communicate issues effectively and solve problems creatively \r<br>\n\r<br>\nQualification Requirements \r<br>\n\225 At least five HTML and five Flash websites published \r<br>\n\r<br>\nAbout Heatwave Interactive \r<br>\n\r<br>\nFounded in early 2007 by games industry veteran Anthony Castoro (EA, Sony Online Entertainment, Codemasters) and successful entrepreneur Donn Clendenon (MPG-Net, World Gaming Corporation, I-Sun Networks), Heatwave\231 Interactive is an entertainment production company developing original and licensed games that crossover to film and television. Staffed by veterans from multiple media industries, Heatwave\222s team members are credited with over 50 commercial video games including Wing Commander (series), Battlefield 2 (series), Ultima Online (series), Star Wars (various), Lord of the Rings Online: Shadows of Angmar, and Richard Garriott\222s Tabula Rasa. Supporting the Central Studio is a Board of Advisors, including Jason Bell, CEO of Chrysalis Games, formerly of Turbine, Atari, EA, and Kesmai; Ann E. Kronen, formerly of Atari, Humongous Entertainment, Disney, Phillips, and Broderbund Software; and Charles J. Weber, CEO of Weber Communications, formerly of LucasFilm Ltd. \r<br>\n\r<br>\n<a href=\"http://www.heatwave.com\" rel=\"nofollow\">http://www.heatwave.com</a> <!-- START CLTAGS -->\n\n\n<br><br><ul class=\"blurbs\">\n<li> <!-- CLTAG GeographicArea=Austin, TX -->Location: Austin, TX\n<li>Principals only. Recruiters, please don't contact this job poster.\n<li>Please, no phone calls about this job!\n<li>Please do not contact job poster about other services, products or commercial interests.</ul>\n<!-- END CLTAGS -->\n\t\t<table summary=\"craigslist hosted images\">\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t</tr>\n\t\t</table>\n\n</div>\nPostingID: 1563840172<br>\n\n\n<br>\n\n<hr>\n<ul class=\"clfooter\">\n\t<li>Copyright &copy; 2010 craigslist, inc.</li>\n\t<li><a href=\"http://www.craigslist.org/about/terms.of.use.html\">terms of use</a></li>\n\t<li><a href=\"http://www.craigslist.org/about/privacy_policy\">privacy policy</a></li>\n\t<li><a href=\"/forums/?forumID=8\">feedback forum</a></li>\n</ul>\n\n<script type=\"text/javascript\" src=\"http://www.craigslist.org/js/jquery.js\"></script>\n<script type=\"text/javascript\" src=\"http://www.craigslist.org/js/postings.js\"></script>\n<script type=\"text/javascript\"><!--\n\tpID = 1563840172;\n-->\n</script>\n</body>\n</html>\n\n"
-Rendering feeds/remote_show_post
-Completed in 9.18448 (0 reqs/sec) | Rendering: 0.50170 (5%) | DB: 1.39724 (15%) | 200 OK [http://localhost/remote_show_post/1205/show_feeds]
-
-
-Processing FeedsController#remote_show_post (for 127.0.0.1 at 2010-02-03 12:39:14) [POST]
-  Session ID: BAh7CDoOa2VlcF90aW1lIgY1Ogxjc3JmX2lkIiU0NDdiYTA2YThiZjExZTNm
-ZTk3ZGM0ODU3MDVkZmQzMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
-Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--0fdc176e631c55c5bb13bfba0ce738591ed85ee2
-  Parameters: {"authenticity_token"=>"e1f9cb1494e741a7da9dfd17ff411a9bb6347bb5", "action"=>"remote_show_post", "id"=>"1217", "called_from"=>"show_feeds", "controller"=>"feeds"}
-
-
-********* body <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<title>IT Wizard Project Engineer</title>
-	<meta name="robots" content="NOARCHIVE,NOFOLLOW">
-	<link rel="stylesheet" title="craigslist" href="http://www.craigslist.org/styles/craigslist.css" type="text/css" media="all">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</head>
-
-<body class="posting">
-
-
-<div class="bchead">
-	<a id="ef" href="/email.friend?postingID=1553851738">email this posting to a friend</a>
-	<a href="http://austin.craigslist.org/">austin craigslist</a> &gt;
-	
-	 <a href="http://austin.craigslist.org/jjj/">jobs</a> &gt;
-    <a href="http://austin.craigslist.org/web/">web/HTML/info design jobs</a>
-</div>
-
-	
-
-	<div id="flags">
-		<div id="flagMsg">
-			please <a href="http://www.craigslist.org/about/help/flags_and_community_moderation">flag</a> with care:
-		</div>
-		<div id="flagChooser">
-			<br>
-			<a class="fl" id="flag16" href="/flag/?flagCode=16&amp;postingID=1553851738"
-				title="Wrong category, wrong site, discusses another post, or otherwise misplaced">
-				miscategorized</a>
-			<br>
-
-			<a class="fl" id="flag28" href="/flag/?flagCode=28&amp;postingID=1553851738"
-				title="Violates craigslist Terms Of Use or other posted guidelines">
-				prohibited</a>
-			<br>
-
-			<a class="fl" id="flag15" href="/flag/?flagCode=15&amp;postingID=1553851738"
-				title="Posted too frequently, in multiple cities/categories, or is too commercial">
-				spam/overpost</a>
-			<br>
-
-			<a class="fl" id="flag9" href="/flag/?flagCode=9&amp;postingID=1553851738"
-				title="Should be considered for inclusion in the Best-Of-Craigslist">
-				best of craigslist</a>
-			<br>
-		</div>
-	</div>
-
-<div id="tsb">
-			<em>Avoid scams and fraud by dealing locally!</em> Beware any deal involving Western Union, Moneygram, wire transfer, cashier check, money order, shipping, escrow, or any promise of transaction protection/certification/guarantee. <a href="http://www.craigslist.org/about/scams.html">More info</a></div>
-<h2>IT Wizard Project Engineer (Austin)</h2>
-<hr>
-Date: 2010-01-15, 10:18AM CST<br>
-Reply to: <a href="mailto:job-8sv5y-1553851738@craigslist.org?subject=IT%20Wizard%20Project%20Engineer%20(Austin)&amp;body=%0A%0Ahttp%3A%2F%2Faustin.craigslist.org%2Fweb%2F1553851738.html%0A">job-8sv5y-1553851738@craigslist.org</a> <sup>[<a href="http://www.craigslist.org/about/help/replying_to_posts" target="_blank">Errors when replying to ads?</a>]</sup><br>
-<hr>
-<br>
-<div id="userbody">
-IT Wizard Project Engineer for Company Headquartered in Austin, Texas.<br>
-We are an internet direct marketing call center headquartered in Austin, Texas.    <br>
-We are seeking a Ninja Level Project Engineering Manager that is a multi-tasker that can come in and OWN the various project deliverables. <br>
-<br>
-Responsibilities include, but are not limited to: <br>
-<br>
-„«	Manages the development, implementation, and evaluation of complex designs. <br>
-„«	Oversees product construction and testing in order to ensure completion of projects as efficiently and effectively as possible<br>
-„«	Responsible for the completion of  IT engineering projects. <br>
-„«	Performs engineering design evaluations and implementations.   <br>
-„«	Works to complete projects below budget and in spite of scheduling restraints. <br>
-„«	Develops, implements, and monitors information systems policies and controls to ensure data accuracy, security, and regulatory compliance. <br>
-„«	Reviews reports of computer and peripheral equipment production, malfunction, and maintenance to determine and address problems. <br>
-„«	Requires a bachelor's degree and minimum of 5-7 years of experience in the field or in a related area. <br>
-„«	If required can  lead and direct the work of others. <br>
-„«	Looks at road blocks as a challenge and never reports a problem without including a suggested solution<br>
-<br>
-If you meet these qualifications AND you are interested please send BOTH your salary history and resume ONE time to controller@secondmeta.com<br>
-<br>
-<br>
-Recruiters please don't contact this job poster. (Read it again please I know you see it there so please do not call)<br>
-<!-- START CLTAGS -->
-
-
-<br><br><ul class="blurbs">
-<li> <!-- CLTAG GeographicArea=Austin -->Location: Austin
-<li> <!-- CLTAG compensation=TBD -->Compensation: TBD
-<li>Principals only. Recruiters, please don't contact this job poster.
-<li>Please, no phone calls about this job!
-<li>Please do not contact job poster about other services, products or commercial interests.</ul>
-<!-- END CLTAGS -->
-		<table summary="craigslist hosted images">
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-			</tr>
-		</table>
-
-</div>
-PostingID: 1553851738<br>
-
-
-<br>
-
-<hr>
-<ul class="clfooter">
-	<li>Copyright &copy; 2010 craigslist, inc.</li>
-	<li><a href="http://www.craigslist.org/about/terms.of.use.html">terms of use</a></li>
-	<li><a href="http://www.craigslist.org/about/privacy_policy">privacy policy</a></li>
-	<li><a href="/forums/?forumID=8">feedback forum</a></li>
-</ul>
-
-<script type="text/javascript" src="http://www.craigslist.org/js/jquery.js"></script>
-<script type="text/javascript" src="http://www.craigslist.org/js/postings.js"></script>
-<script type="text/javascript"><!--
-	pID = 1553851738;
--->
-</script>
-</body>
-</html>
-
- ****
-
-filtering email: "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n\t<title>IT Wizard Project Engineer</title>\n\t<meta name=\"robots\" content=\"NOARCHIVE,NOFOLLOW\">\n\t<link rel=\"stylesheet\" title=\"craigslist\" href=\"http://www.craigslist.org/styles/craigslist.css\" type=\"text/css\" media=\"all\">\n\t<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n</head>\n\n<body class=\"posting\">\n\n\n<div class=\"bchead\">\n\t<a id=\"ef\" href=\"/email.friend?postingID=1553851738\">email this posting to a friend</a>\n\t<a href=\"http://austin.craigslist.org/\">austin craigslist</a> &gt;\n\t\n\t <a href=\"http://austin.craigslist.org/jjj/\">jobs</a> &gt;\n    <a href=\"http://austin.craigslist.org/web/\">web/HTML/info design jobs</a>\n</div>\n\n\t\n\n\t<div id=\"flags\">\n\t\t<div id=\"flagMsg\">\n\t\t\tplease <a href=\"http://www.craigslist.org/about/help/flags_and_community_moderation\">flag</a> with care:\n\t\t</div>\n\t\t<div id=\"flagChooser\">\n\t\t\t<br>\n\t\t\t<a class=\"fl\" id=\"flag16\" href=\"/flag/?flagCode=16&amp;postingID=1553851738\"\n\t\t\t\ttitle=\"Wrong category, wrong site, discusses another post, or otherwise misplaced\">\n\t\t\t\tmiscategorized</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag28\" href=\"/flag/?flagCode=28&amp;postingID=1553851738\"\n\t\t\t\ttitle=\"Violates craigslist Terms Of Use or other posted guidelines\">\n\t\t\t\tprohibited</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag15\" href=\"/flag/?flagCode=15&amp;postingID=1553851738\"\n\t\t\t\ttitle=\"Posted too frequently, in multiple cities/categories, or is too commercial\">\n\t\t\t\tspam/overpost</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag9\" href=\"/flag/?flagCode=9&amp;postingID=1553851738\"\n\t\t\t\ttitle=\"Should be considered for inclusion in the Best-Of-Craigslist\">\n\t\t\t\tbest of craigslist</a>\n\t\t\t<br>\n\t\t</div>\n\t</div>\n\n<div id=\"tsb\">\n\t\t\t<em>Avoid scams and fraud by dealing locally!</em> Beware any deal involving Western Union, Moneygram, wire transfer, cashier check, money order, shipping, escrow, or any promise of transaction protection/certification/guarantee. <a href=\"http://www.craigslist.org/about/scams.html\">More info</a></div>\n<h2>IT Wizard Project Engineer (Austin)</h2>\n<hr>\nDate: 2010-01-15, 10:18AM CST<br>\nReply to: <a href=\"mailto:job-8sv5y-1553851738@craigslist.org?subject=IT%20Wizard%20Project%20Engineer%20(Austin)&amp;body=%0A%0Ahttp%3A%2F%2Faustin.craigslist.org%2Fweb%2F1553851738.html%0A\">job-8sv5y-1553851738@craigslist.org</a> <sup>[<a href=\"http://www.craigslist.org/about/help/replying_to_posts\" target=\"_blank\">Errors when replying to ads?</a>]</sup><br>\n<hr>\n<br>\n<div id=\"userbody\">\nIT Wizard Project Engineer for Company Headquartered in Austin, Texas.\r<br>\nWe are an internet direct marketing call center headquartered in Austin, Texas.    \r<br>\nWe are seeking a Ninja Level Project Engineering Manager that is a multi-tasker that can come in and OWN the various project deliverables. \r<br>\n\r<br>\nResponsibilities include, but are not limited to: \r<br>\n\r<br>\n\204\253\tManages the development, implementation, and evaluation of complex designs. \r<br>\n\204\253\tOversees product construction and testing in order to ensure completion of projects as efficiently and effectively as possible\r<br>\n\204\253\tResponsible for the completion of  IT engineering projects. \r<br>\n\204\253\tPerforms engineering design evaluations and implementations.   \r<br>\n\204\253\tWorks to complete projects below budget and in spite of scheduling restraints. \r<br>\n\204\253\tDevelops, implements, and monitors information systems policies and controls to ensure data accuracy, security, and regulatory compliance. \r<br>\n\204\253\tReviews reports of computer and peripheral equipment production, malfunction, and maintenance to determine and address problems. \r<br>\n\204\253\tRequires a bachelor's degree and minimum of 5-7 years of experience in the field or in a related area. \r<br>\n\204\253\tIf required can  lead and direct the work of others. \r<br>\n\204\253\tLooks at road blocks as a challenge and never reports a problem without including a suggested solution\r<br>\n\r<br>\nIf you meet these qualifications AND you are interested please send BOTH your salary history and resume ONE time to controller@secondmeta.com\r<br>\n\r<br>\n\r<br>\nRecruiters please don't contact this job poster. (Read it again please I know you see it there so please do not call)\r<br>\n<!-- START CLTAGS -->\n\n\n<br><br><ul class=\"blurbs\">\n<li> <!-- CLTAG GeographicArea=Austin -->Location: Austin\n<li> <!-- CLTAG compensation=TBD -->Compensation: TBD\n<li>Principals only. Recruiters, please don't contact this job poster.\n<li>Please, no phone calls about this job!\n<li>Please do not contact job poster about other services, products or commercial interests.</ul>\n<!-- END CLTAGS -->\n\t\t<table summary=\"craigslist hosted images\">\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t</tr>\n\t\t</table>\n\n</div>\nPostingID: 1553851738<br>\n\n\n<br>\n\n<hr>\n<ul class=\"clfooter\">\n\t<li>Copyright &copy; 2010 craigslist, inc.</li>\n\t<li><a href=\"http://www.craigslist.org/about/terms.of.use.html\">terms of use</a></li>\n\t<li><a href=\"http://www.craigslist.org/about/privacy_policy\">privacy policy</a></li>\n\t<li><a href=\"/forums/?forumID=8\">feedback forum</a></li>\n</ul>\n\n<script type=\"text/javascript\" src=\"http://www.craigslist.org/js/jquery.js\"></script>\n<script type=\"text/javascript\" src=\"http://www.craigslist.org/js/postings.js\"></script>\n<script type=\"text/javascript\"><!--\n\tpID = 1553851738;\n-->\n</script>\n</body>\n</html>\n\n"
-Rendering feeds/remote_show_post
-Completed in 8.80894 (0 reqs/sec) | Rendering: 0.50176 (5%) | DB: 1.57214 (17%) | 200 OK [http://localhost/remote_show_post/1217/show_feeds]
-
-
-Processing FeedsController#remote_show_post (for 127.0.0.1 at 2010-02-03 12:40:11) [POST]
-  Session ID: BAh7CDoOa2VlcF90aW1lIgY1Ogxjc3JmX2lkIiU0NDdiYTA2YThiZjExZTNm
-ZTk3ZGM0ODU3MDVkZmQzMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
-Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--0fdc176e631c55c5bb13bfba0ce738591ed85ee2
-  Parameters: {"authenticity_token"=>"e1f9cb1494e741a7da9dfd17ff411a9bb6347bb5", "action"=>"remote_show_post", "id"=>"1252", "called_from"=>"show_feeds", "controller"=>"feeds"}
-
-
-********* body <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<title>Experienced front-end developer needed (contract 3-6mos) </title>
-	<meta name="robots" content="NOARCHIVE,NOFOLLOW">
-	<link rel="stylesheet" title="craigslist" href="http://www.craigslist.org/styles/craigslist.css" type="text/css" media="all">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</head>
-
-<body class="posting">
-
-
-<div class="bchead">
-	<a id="ef" href="/email.friend?postingID=1584022907">email this posting to a friend</a>
-	<a href="http://austin.craigslist.org/">austin craigslist</a> &gt;
-	
-	 <a href="http://austin.craigslist.org/jjj/">jobs</a> &gt;
-    <a href="http://austin.craigslist.org/eng/">internet engineering jobs</a>
-</div>
-
-	
-
-	<div id="flags">
-		<div id="flagMsg">
-			please <a href="http://www.craigslist.org/about/help/flags_and_community_moderation">flag</a> with care:
-		</div>
-		<div id="flagChooser">
-			<br>
-			<a class="fl" id="flag16" href="/flag/?flagCode=16&amp;postingID=1584022907"
-				title="Wrong category, wrong site, discusses another post, or otherwise misplaced">
-				miscategorized</a>
-			<br>
-
-			<a class="fl" id="flag28" href="/flag/?flagCode=28&amp;postingID=1584022907"
-				title="Violates craigslist Terms Of Use or other posted guidelines">
-				prohibited</a>
-			<br>
-
-			<a class="fl" id="flag15" href="/flag/?flagCode=15&amp;postingID=1584022907"
-				title="Posted too frequently, in multiple cities/categories, or is too commercial">
-				spam/overpost</a>
-			<br>
-
-			<a class="fl" id="flag9" href="/flag/?flagCode=9&amp;postingID=1584022907"
-				title="Should be considered for inclusion in the Best-Of-Craigslist">
-				best of craigslist</a>
-			<br>
-		</div>
-	</div>
-
-<div id="tsb">
-			<em>Avoid scams and fraud by dealing locally!</em> Beware any deal involving Western Union, Moneygram, wire transfer, cashier check, money order, shipping, escrow, or any promise of transaction protection/certification/guarantee. <a href="http://www.craigslist.org/about/scams.html">More info</a></div>
-<h2>Experienced front-end developer needed (contract 3-6mos)  (Austin)</h2>
-<hr>
-Date: 2010-02-03, 10:42AM CST<br>
-Reply to: <a href="mailto:job-efmss-1584022907@craigslist.org?subject=Experienced%20front-end%20developer%20needed%20(contract%203-6mos)%20%20(Austin)&amp;body=%0A%0Ahttp%3A%2F%2Faustin.craigslist.org%2Feng%2F1584022907.html%0A">job-efmss-1584022907@craigslist.org</a> <sup>[<a href="http://www.craigslist.org/about/help/replying_to_posts" target="_blank">Errors when replying to ads?</a>]</sup><br>
-<hr>
-<br>
-<div id="userbody">
-We develop a website for a major political campaign and need some help with some of the more interactive features. The campaign would like to develop a series of microsites with strong interactions that will require flash as well as javascript, css, and html and we need some help with that.<br>
-<br>
-You will work with colleagues in Austin but from your own house with your own gear. We supply hosted source management, development, staging, and production systems, and fun and competent peers including web designers.<br>
-<br>
-Our workflow starts with a project manager and designer interacting with the campaign to come up with a consistent, usable, and implementable design. From there the engineer and designer work to get it done, with regular review.<br>
-<br>
-Requirements:<br>
- - Experience building clean, usable websites top to bottom<br>
- - Excellent CSS, Javascript, and HTML skills<br>
- - Animation experience with Flash creating interactive sites<br>
- - High self motivation, great working independently and delivering on commitments. Previous contracting experience and a string portfolio!<br>
- - Comfortable in PHP<br>
- - Understand structured development, source code control, agile development<br>
-<br>
-Please send a resume, references, and links to previous work<!-- START CLTAGS -->
-
-
-<br><br><ul class="blurbs">
-<li> <!-- CLTAG GeographicArea=Austin -->Location: Austin
-<li> <!-- CLTAG compensation=Based on experience -->Compensation: Based on experience
-<li> <!-- CLTAG telecommuting=on -->Telecommuting is ok.
-<li> <!-- CLTAG contract=on -->This is a contract job.
-<li>Principals only. Recruiters, please don't contact this job poster.
-<li>Please, no phone calls about this job!
-<li>Please do not contact job poster about other services, products or commercial interests.</ul>
-<!-- END CLTAGS -->
-		<table summary="craigslist hosted images">
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-			</tr>
-		</table>
-
-</div>
-PostingID: 1584022907<br>
-
-
-<br>
-
-<hr>
-<ul class="clfooter">
-	<li>Copyright &copy; 2010 craigslist, inc.</li>
-	<li><a href="http://www.craigslist.org/about/terms.of.use.html">terms of use</a></li>
-	<li><a href="http://www.craigslist.org/about/privacy_policy">privacy policy</a></li>
-	<li><a href="/forums/?forumID=8">feedback forum</a></li>
-</ul>
-
-<script type="text/javascript" src="http://www.craigslist.org/js/jquery.js"></script>
-<script type="text/javascript" src="http://www.craigslist.org/js/postings.js"></script>
-<script type="text/javascript"><!--
-	pID = 1584022907;
--->
-</script>
-</body>
-</html>
-
- ****
-
-filtering email: "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n\t<title>Experienced front-end developer needed (contract 3-6mos) </title>\n\t<meta name=\"robots\" content=\"NOARCHIVE,NOFOLLOW\">\n\t<link rel=\"stylesheet\" title=\"craigslist\" href=\"http://www.craigslist.org/styles/craigslist.css\" type=\"text/css\" media=\"all\">\n\t<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n</head>\n\n<body class=\"posting\">\n\n\n<div class=\"bchead\">\n\t<a id=\"ef\" href=\"/email.friend?postingID=1584022907\">email this posting to a friend</a>\n\t<a href=\"http://austin.craigslist.org/\">austin craigslist</a> &gt;\n\t\n\t <a href=\"http://austin.craigslist.org/jjj/\">jobs</a> &gt;\n    <a href=\"http://austin.craigslist.org/eng/\">internet engineering jobs</a>\n</div>\n\n\t\n\n\t<div id=\"flags\">\n\t\t<div id=\"flagMsg\">\n\t\t\tplease <a href=\"http://www.craigslist.org/about/help/flags_and_community_moderation\">flag</a> with care:\n\t\t</div>\n\t\t<div id=\"flagChooser\">\n\t\t\t<br>\n\t\t\t<a class=\"fl\" id=\"flag16\" href=\"/flag/?flagCode=16&amp;postingID=1584022907\"\n\t\t\t\ttitle=\"Wrong category, wrong site, discusses another post, or otherwise misplaced\">\n\t\t\t\tmiscategorized</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag28\" href=\"/flag/?flagCode=28&amp;postingID=1584022907\"\n\t\t\t\ttitle=\"Violates craigslist Terms Of Use or other posted guidelines\">\n\t\t\t\tprohibited</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag15\" href=\"/flag/?flagCode=15&amp;postingID=1584022907\"\n\t\t\t\ttitle=\"Posted too frequently, in multiple cities/categories, or is too commercial\">\n\t\t\t\tspam/overpost</a>\n\t\t\t<br>\n\n\t\t\t<a class=\"fl\" id=\"flag9\" href=\"/flag/?flagCode=9&amp;postingID=1584022907\"\n\t\t\t\ttitle=\"Should be considered for inclusion in the Best-Of-Craigslist\">\n\t\t\t\tbest of craigslist</a>\n\t\t\t<br>\n\t\t</div>\n\t</div>\n\n<div id=\"tsb\">\n\t\t\t<em>Avoid scams and fraud by dealing locally!</em> Beware any deal involving Western Union, Moneygram, wire transfer, cashier check, money order, shipping, escrow, or any promise of transaction protection/certification/guarantee. <a href=\"http://www.craigslist.org/about/scams.html\">More info</a></div>\n<h2>Experienced front-end developer needed (contract 3-6mos)  (Austin)</h2>\n<hr>\nDate: 2010-02-03, 10:42AM CST<br>\nReply to: <a href=\"mailto:job-efmss-1584022907@craigslist.org?subject=Experienced%20front-end%20developer%20needed%20(contract%203-6mos)%20%20(Austin)&amp;body=%0A%0Ahttp%3A%2F%2Faustin.craigslist.org%2Feng%2F1584022907.html%0A\">job-efmss-1584022907@craigslist.org</a> <sup>[<a href=\"http://www.craigslist.org/about/help/replying_to_posts\" target=\"_blank\">Errors when replying to ads?</a>]</sup><br>\n<hr>\n<br>\n<div id=\"userbody\">\nWe develop a website for a major political campaign and need some help with some of the more interactive features. The campaign would like to develop a series of microsites with strong interactions that will require flash as well as javascript, css, and html and we need some help with that.\r<br>\n\r<br>\nYou will work with colleagues in Austin but from your own house with your own gear. We supply hosted source management, development, staging, and production systems, and fun and competent peers including web designers.\r<br>\n\r<br>\nOur workflow starts with a project manager and designer interacting with the campaign to come up with a consistent, usable, and implementable design. From there the engineer and designer work to get it done, with regular review.\r<br>\n\r<br>\nRequirements:\r<br>\n - Experience building clean, usable websites top to bottom\r<br>\n - Excellent CSS, Javascript, and HTML skills\r<br>\n - Animation experience with Flash creating interactive sites\r<br>\n - High self motivation, great working independently and delivering on commitments. Previous contracting experience and a string portfolio!\r<br>\n - Comfortable in PHP\r<br>\n - Understand structured development, source code control, agile development\r<br>\n\r<br>\nPlease send a resume, references, and links to previous work<!-- START CLTAGS -->\n\n\n<br><br><ul class=\"blurbs\">\n<li> <!-- CLTAG GeographicArea=Austin -->Location: Austin\n<li> <!-- CLTAG compensation=Based on experience -->Compensation: Based on experience\n<li> <!-- CLTAG telecommuting=on -->Telecommuting is ok.\n<li> <!-- CLTAG contract=on -->This is a contract job.\n<li>Principals only. Recruiters, please don't contact this job poster.\n<li>Please, no phone calls about this job!\n<li>Please do not contact job poster about other services, products or commercial interests.</ul>\n<!-- END CLTAGS -->\n\t\t<table summary=\"craigslist hosted images\">\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t\t<td align=\"center\"></td>\n\t\t\t</tr>\n\t\t</table>\n\n</div>\nPostingID: 1584022907<br>\n\n\n<br>\n\n<hr>\n<ul class=\"clfooter\">\n\t<li>Copyright &copy; 2010 craigslist, inc.</li>\n\t<li><a href=\"http://www.craigslist.org/about/terms.of.use.html\">terms of use</a></li>\n\t<li><a href=\"http://www.craigslist.org/about/privacy_policy\">privacy policy</a></li>\n\t<li><a href=\"/forums/?forumID=8\">feedback forum</a></li>\n</ul>\n\n<script type=\"text/javascript\" src=\"http://www.craigslist.org/js/jquery.js\"></script>\n<script type=\"text/javascript\" src=\"http://www.craigslist.org/js/postings.js\"></script>\n<script type=\"text/javascript\"><!--\n\tpID = 1584022907;\n-->\n</script>\n</body>\n</html>\n\n"
-Rendering feeds/remote_show_post
-Completed in 8.58084 (0 reqs/sec) | Rendering: 0.49796 (5%) | DB: 1.40982 (16%) | 200 OK [http://localhost/remote_show_post/1252/show_feeds]
-
-
-Processing FeedsController#show_feeds (for 127.0.0.1 at 2010-02-03 12:40:34) [GET]
-  Session ID: BAh7CDoOa2VlcF90aW1lIgY1Ogxjc3JmX2lkIiU0NDdiYTA2YThiZjExZTNm
-ZTk3ZGM0ODU3MDVkZmQzMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
-Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--0fdc176e631c55c5bb13bfba0ce738591ed85ee2
-  Parameters: {"action"=>"show_feeds", "controller"=>"feeds"}
-Rendering template within layouts/feeds
-Rendering feeds/show_feeds
-Completed in 8.86239 (0 reqs/sec) | Rendering: 0.35093 (3%) | DB: 1.41427 (15%) | 200 OK [http://localhost/show_feeds]
