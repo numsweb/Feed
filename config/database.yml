@@ -20,7 +20,7 @@ development:
   database: feed_development
   username: rails
   password: rails_rocks
-  socket: /tmp/mysql.sock
+
 
 # Warning: The database defined as 'test' will be erased and
 # re-generated from your development database when you run 'rake'.
@@ -35,8 +35,9 @@ test:
 
 production:
   adapter: mysql
-  encoding: utf8
   database: oneoriginalgeek_feeds_production
   username: rails
   password: rails_rocks
+  host: mysql.oneoriginalgeek.com
+  encoding: utf8
 
