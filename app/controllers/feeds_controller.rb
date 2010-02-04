@@ -168,7 +168,7 @@ class FeedsController < ApplicationController
      @feed.is_read = 1
      @feed.save
      @feed_body =fetch(@feed.link)
-            logger.info "\n\n********* body " + @feed_body + " ****\n\n"
+           # logger.info "\n\n********* body " + @feed_body + " ****\n\n"
      @email = @feed.find_email(@feed_body)
      if params[:called_from] == "show_feeds"
     	  get_new
