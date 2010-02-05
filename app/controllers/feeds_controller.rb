@@ -164,19 +164,27 @@ class FeedsController < ApplicationController
    end
    
    def remote_show_post
-      
     @feed = Feed.find(params[:id])
      @feed.is_read = 1
      @feed.save
+     	#now fetch the stored items for display
+      @sof = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"Software QA DBA" ], :order => "created_at DESC")
+      @web = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"Web Info Design" ], :order => "created_at DESC")
+      @eng = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"Internet Engineers" ], :order => "created_at DESC")
+      @cpg = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"Computer Gigs" ], :order => "created_at DESC")
+      @sn = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"System Network" ], :order => "created_at DESC")
+      @postings = @sof.size + @web.size + @eng.size + @cpg.size
      if @feed.feed_body.blank?
+       logger.info "\n\n***Fetching feed***\n\n"
        @feed_body =fetch(@feed.link)
      else
+      logger.info "\n\n***Found feed info in DB***\n\n"
       @feed_body = @feed.feed_body
      end
            # logger.info "\n\n********* body " + @feed_body + " ****\n\n"
      @email = @feed.find_email(@feed_body)
      if params[:called_from] == "show_feeds"
-       get_new
+       #get_new
      end
     	
    end
@@ -230,7 +238,8 @@ class FeedsController < ApplicationController
         #test = @feeds.detect{|item| /"#{feed}"/ =~item }
      	  test = Feed.find(:first, :conditions => "link = '" + feed['link'] + "'")
      	  if test.nil?
-     	     newfeed = Feed.new({:link => feed['link'], :heading => feed['heading'], :title => feed['title'], :feed_body => feed['body']})
+             feed_body =fetch(feed['link'])
+     	     newfeed = Feed.new({:link => feed['link'], :heading => feed['heading'], :title => feed['title'], :feed_body => feed_body})
      	     newfeed.save
      	  end
      	 end
