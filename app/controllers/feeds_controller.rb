@@ -158,7 +158,8 @@ class FeedsController < ApplicationController
      @feed = Feed.find(params[:id])
      @feed.is_read = 1
      @feed.save
-     @feed_body =fetch(@feed.link)
+     #@feed_body =fetch(@feed.link)
+     @feed_body = @feed.feed_body
      @email = @feed.find_email(@feed_body)
    end
    
@@ -167,12 +168,16 @@ class FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
      @feed.is_read = 1
      @feed.save
-     @feed_body =fetch(@feed.link)
+     if @feed.feed_body.blank?
+       @feed_body =fetch(@feed.link)
+     else
+      @feed_body = @feed.feed_body
+     end
            # logger.info "\n\n********* body " + @feed_body + " ****\n\n"
      @email = @feed.find_email(@feed_body)
      if params[:called_from] == "show_feeds"
-    	  get_new
-  	  end
+       get_new
+     end
     	
    end
    
@@ -225,7 +230,7 @@ class FeedsController < ApplicationController
         #test = @feeds.detect{|item| /"#{feed}"/ =~item }
      	  test = Feed.find(:first, :conditions => "link = '" + feed['link'] + "'")
      	  if test.nil?
-     	     newfeed = Feed.new({:link => feed['link'], :heading => feed['heading'], :title => feed['title']})
+     	     newfeed = Feed.new({:link => feed['link'], :heading => feed['heading'], :title => feed['title'], :feed_body => feed['body']})
      	     newfeed.save
      	  end
      	 end
