@@ -1,7 +1,8 @@
+
 <% unless @email.blank? %>
 
 
-<%= mail_to(@email.to_s, "Please use this link to send mail",  :subject => "Your Craigslist posting " + @email.to_s, :cc => "John.Kropka@gmail.com", 
+  <%= mail_to(@email.to_s, "Please use this link to send mail",  :subject => "Your Craigslist posting " + @email.to_s, :cc => "s000.coder@gmail.com", 
 	:body => "Regarding your craigslist posting" + @email.to_s  + @feed_body.gsub(/<\/?[^>]*>/, "")) %>
 <% end %>
 

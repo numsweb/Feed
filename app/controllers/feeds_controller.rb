@@ -196,13 +196,13 @@ class FeedsController < ApplicationController
    def fetch(url)
        res = Net::HTTP.get_response(URI.parse(url.to_s))
 
-       #if res.body =~ /<h2>/
-       #	if $' =~ /<br>\n<hr>\n<br>\n/
-       #	   return "<h2>#{$`}"
-       #	end
-       #else
+       if res.body =~ /<h2>/
+       	if $' =~ /<br>\n<hr>\n<br>\n/
+       	   return "#{$'}"
+       	end
+       else
          return res.body
-       #end	   
+       end	   
     end
  	
     def get_new
