@@ -1,6 +1,6 @@
 <h3><%= @postings.to_s %> Postings</h1>
 
-<body onload="window.setTimeout('window.location.reload()',1000000);">
+
 <div id="table">
 <p>Note: <font color="green">Green</font> Postings have been marked read, <font color="blue">Blue</font> postings are unread.</p>
 <% form_for :feeds, :url => mark_feeds_path  do |f| %>
