@@ -1,7 +1,9 @@
 <%= render :partial => "search" %>
-<p> <b>Be Aware</b> this application automatically refreshes every 5 minutes, <br/>at which time the
-  loaded posting will be cleared</p>
-<p>Last refreshed <%= Time.now.to_s(:standard) %> </p>
+<p> <b>Be Aware</b> this application automatically refreshes every 5 minutes, at which time the
+  loaded posting will be cleared
+  <b>Last refreshed: </b><%= Time.now.to_s(:standard) %>
+</p>
+
 <div id="feeds_container">
 	<div id="feeds_list">
 		<%= render :partial => "feeds_list" %>
