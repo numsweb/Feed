@@ -45,6 +45,7 @@ class FeedsController < ApplicationController
   # POST /feeds.xml
   def create
     @feed = Feed.new(params[:feed])
+    @feed.feed_body = fetch(@feed.link).body
 
     respond_to do |format|
       if @feed.save
@@ -158,8 +159,11 @@ class FeedsController < ApplicationController
      @feed = Feed.find(params[:id])
      @feed.is_read = 1
      @feed.save
-     #@feed_body =fetch(@feed.link)
-     @feed_body = @feed.feed_body
+     if @fees.feed_body.blank?
+        @feed_body =fetch(@feed.link).body
+     else
+       @feed_body = @feed.feed_body
+     end
      @email = @feed.find_email(@feed_body)
    end
    
@@ -174,7 +178,7 @@ class FeedsController < ApplicationController
       @cpg = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"Computer Gigs" ], :order => "created_at DESC")
       @sn = Feed.find(:all, :conditions => ["is_read = ? AND heading=?", 0,"System Network" ], :order => "created_at DESC")
       @postings = @sof.size + @web.size + @eng.size + @cpg.size
-     if @feed.feed_body.blank?
+      if @feed.feed_body.blank?
        logger.info "\n\n***Fetching feed***\n\n"
        @feed_body =fetch(@feed.link)
      else
@@ -182,7 +186,7 @@ class FeedsController < ApplicationController
       @feed_body = @feed.feed_body
      end
            # logger.info "\n\n********* body " + @feed_body + " ****\n\n"
-     @email = @feed.find_email(@feed_body)
+     # no longer used! @email = @feed.find_email(@feed_body)
      if params[:called_from] == "show_feeds"
        #get_new
      end
@@ -197,12 +201,14 @@ class FeedsController < ApplicationController
        res = Net::HTTP.get_response(URI.parse(url.to_s))
 
        if res.body =~ /<h2>/
-       	if $' =~ /<br>\n<hr>\n<br>\n/
+       	#if $' =~ /<br>\n<hr>\n<br>\n/ CL changed format
+        if $' =~ /<hr>\n/
        	   return "#{$'}"
        	end
        else
          return res.body
-       end	   
+       end
+
     end
  	
     def get_new
@@ -239,6 +245,7 @@ class FeedsController < ApplicationController
      	  test = Feed.find(:first, :conditions => "link = '" + feed['link'] + "'")
      	  if test.nil?
              feed_body =fetch(feed['link'])
+             logger.info feed_body
      	     newfeed = Feed.new({:link => feed['link'], :heading => feed['heading'], :title => feed['title'], :feed_body => feed_body})
      	     newfeed.save
      	  end

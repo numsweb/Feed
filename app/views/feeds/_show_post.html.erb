@@ -1,10 +1,11 @@
 
-<% unless @email.blank? %>
+<%# unless @email.blank? %>
 
 
-  <%= mail_to(@email.to_s, "Please use this link to send mail",  :subject => "Your Craigslist posting " + @email.to_s, :cc => "s000.coder@gmail.com", 
-	:body => "Regarding your craigslist posting" + @email.to_s  + @feed_body.gsub(/<\/?[^>]*>/, "")) %>
-<% end %>
+  <%#= mail_to(@email.to_s, "Please use this link to send mail",  :subject => "Your Craigslist posting " + @email.to_s, :cc => "s000.coder@gmail.com", 
+	:body => "Regarding your craigslist posting" + @email.to_s ) %>
+	<!--  + @feed_body.gsub(/<\/?[^>]*>/, "") -->
+<%# end %>
 
 
 <h1 style="margin-left:1px;">Original Posting</h1>
