@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '572702701fc72a51f983f5d8586221a1'
+  
+  def login_required
+    logger.info "session " + session.inspect
+    unless session[:current_user]
+      redirect_to login_path
+    end
+  end
 end

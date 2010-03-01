@@ -1,4 +1,5 @@
 <div id="nav">
 
 	<%= nav_li("Unread", show_feeds_path, "") %> | <%= nav_li("All", show_all_feeds_path, "") %> | <%= nav_li("Clear", clear_old_path, :confirm => "This will delete all posts over #{session[:keep_time]} days old, OK?") %> | <%= nav_li( "Settings", settings_path, "" )%> 
+        | <%= nav_li("Logout", logout_path, "") %>
 </div>

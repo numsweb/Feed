@@ -17,6 +17,7 @@ Rails::Initializer.run do |config|
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
   # See Rails::Configuration for more options.
+  config.gem "aasm"
 
   # Skip frameworks you're not going to use (only works if using vendor/rails).
   # To use Rails without a database, you must remove the Active Record framework
@@ -62,5 +63,6 @@ Rails::Initializer.run do |config|
   # Default date/time format ### something is wrong here on the server, what????
   #ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:standard => "%B %d, %Y at %H:%M")
   #ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:standard => "%B %d, %Y at %H:%M")
+  config.active_record.observers = :user_observer
 
 end
