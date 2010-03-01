@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def login_required
     logger.info "session " + session.inspect
     unless session[:current_user]
-      redirect_to login_path
+      redirect_to '/login'
     end
   end
 end
