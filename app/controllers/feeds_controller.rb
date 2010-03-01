@@ -1,5 +1,5 @@
 class FeedsController < ApplicationController
-  before_filter :login_required
+  #before_filter :login_required
   require 'rss/2.0'
   require 'open-uri'
 
