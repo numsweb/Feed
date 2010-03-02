@@ -11,9 +11,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # :secret => '572702701fc72a51f983f5d8586221a1'
   
   def login_required
-    unless session[:current_user]
-      redirect_to '/login'
-    end
+    #unless session[:current_user]
+    #  redirect_to '/login'
+    #end
   end
   
 end
