@@ -6,7 +6,7 @@ class Feed < ActiveRecord::Base
       email_reg = /<a href=\"mailto:.*\">(.*)<\/a>/
       unless text.blank?
         email = text.scan(/<a href=\"mailto:.*\">(.*)<\/a>/)
-        puts email
+        #puts email
         CGI.unescapeHTML(email.to_s)
       end
     end
