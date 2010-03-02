@@ -4,8 +4,7 @@ class User < ActiveRecord::Base
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
-  include AASM
-  aasm_column :state
+
  # no roles include Authorization::AasmRoles
 
   validates_presence_of     :login
@@ -28,42 +27,7 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :name, :password, :password_confirmation
   
-  aasm_initial_state :pending
-  aasm_state :passive
-  aasm_state :pending, :enter => [:make_activation_code]
-  aasm_state :active,  :enter => :do_activate
-  aasm_state :suspended, :enter => :do_suspend
-  aasm_state :deleted, :enter => :do_delete
-  aasm_state :rejected#, :enter => :do_reject # no do_reject method defined
-  aasm_state :disabled, :enter => :do_disable
-
-  aasm_event :register do
-    transitions :from => :passive, :to => :pending, :guard => Proc.new {|u| !(u.crypted_password.blank? && u.password.blank?) }
-  end
-  aasm_event :activate do
-    transitions :from => :pending, :to => :active
-  end
-  aasm_event :suspend do
-    transitions :from => [:passive, :pending, :active], :to => :suspended
-  end
-  aasm_event :delete do
-    transitions :from => [:passive, :pending, :active, :suspended], :to => :deleted
-  end
-  aasm_event :undelete do
-    transitions :from => :deleted, :to => :passive
-  end
-  aasm_event :unsuspend do
-    transitions :from => :suspended, :to => :active,  :guard => Proc.new {|u| !u.activated_at.blank? }
-    transitions :from => :suspended, :to => :pending, :guard => Proc.new {|u| !u.email_confirmation_code.blank? }
-    transitions :from => :suspended, :to => :passive
-  end
-  aasm_event :reject do
-    transitions :from => [:active, :pending], :to => :rejected
-  end
-  aasm_event :disable do
-      transitions :from => [:active, :pending, :passive, :suspended], :to => :disabled
-  end
-
+  
 
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
