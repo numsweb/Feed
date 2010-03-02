@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   
   def login_required
     unless session[:user_id]
-      redirect_to '/login'
+      #redirect_to '/login'
     end
   end
   
