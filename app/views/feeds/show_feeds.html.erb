@@ -1,7 +1,7 @@
 <%= render :partial => "search" %>
 <p> <b>Be Aware</b> this application automatically refreshes every 5 minutes, at which time the
   loaded posting will be cleared
-  <b>Last refreshed: </b><%= Time.now.to_s(:standard) %>
+  <b>Last refreshed: </b><%= Time.zone.now.strftime("%B %d, %Y %H:%M") %> CST
 </p>
 
 <div id="feeds_container">

@@ -62,7 +62,8 @@ Rails::Initializer.run do |config|
   
   # Default date/time format ### something is wrong here on the server, what????
   #ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:standard => "%B %d, %Y at %H:%M")
-  #ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:standard => "%B %d, %Y at %H:%M")
+  ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:standard => "%B %d, %Y at %H:%M")
   config.active_record.observers = :user_observer
+  config.time_zone = 'Central Time (US & Canada)'
 
 end
