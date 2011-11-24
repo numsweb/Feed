@@ -1,18 +1,16 @@
-<h1>Listing feeds</h1>
+<span class="unread" id="unread_count">Unread: <%= @unread_count %> </span>
 
-<table>
-  <tr>
-  </tr>
+<div id="navigation">
+  <%= link_to "Unread", root_path %> | <%= link_to "Read", root_path(:type => "read") %> | <%= link_to "All", root_path(:type => "all") %>
+</div>
 
-<% for feed in @feeds %>
-  <tr>
-    <td><%= link_to 'Show', feed %></td>
-    <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-    <td><%= link_to 'Destroy', feed, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="container">
+  <div id="link_list">
+    <%= render :partial => "link_list", :locals => {:feeds => @feeds} %>
+  </div>
+  
+  <div id="show_item">
+    << Click on a link to the left to show the posting (gray items = read, green = unread)
+  </div>
+</div>
 
-<br />
-
-<%= link_to 'New feed', new_feed_path %>

@@ -1,0 +1,6 @@
+ <table>
+    <tr><td class="listing_title"><%= @feed.title.sanitize%> </td></tr>
+    <tr><td><%= sanitize @feed.summary%> </td></tr>
+    <tr><td><%= @feed.published%> </td></tr>
+    <tr><td><%= link_to "Original Item", @feed.feed_url,  html_options = {:target => :blank }%> </td></tr>
+ </table>

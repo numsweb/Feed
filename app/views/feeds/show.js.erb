@@ -1,0 +1,5 @@
+//alert("this is me!");
+$('#show_item').html('<%= escape_javascript(render(:partial => "details", :object=> @feed)) %>');
+$('#link_list').html('<%= escape_javascript(render(:partial => "link_list", :object=> @feeds)) %>');
+
+$('#unread_count').html('Unread: <%= @unread_count %>');

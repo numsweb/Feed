@@ -1,0 +1,5 @@
+ <table>
+  <% @feeds.each do |feed| %>
+    <tr><td class=<%=feed.is_read ?  "read" :"unread" %> ><%= link_to(feed.display_title, feed, :remote => true) %></td></tr>
+  <% end %>
+</table>

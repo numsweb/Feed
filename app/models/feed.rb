@@ -1,15 +1,13 @@
 class Feed < ActiveRecord::Base
-  has_many :mailings, :dependent => :destroy
+  scope :unread, :conditions => ["is_read = ?", false]
+  scope :read, :conditions => ["is_read = ?", true]
   
-   def find_email(text)
-      @@logger.info "filtering email: "+text.inspect
-      email_reg = /<a href=\"mailto:.*\">(.*)<\/a>/
-      unless text.blank?
-        email = text.scan(/<a href=\"mailto:.*\">(.*)<\/a>/)
-        #puts email
-        CGI.unescapeHTML(email.to_s)
-      end
+  def display_title
+    if title.size < 51
+      return title
+    else
+      return title[0..50] + "..."
     end
-    
-
+  end
+  
 end

@@ -1,0 +1,14 @@
+// Place all the styles related to the feeds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#link_list{float:left;width:500px;border:1px solid #cacaca;height:500px;overflow:auto;}
+#show_item{margin-left:10px;float:left;width:600px;border:1px solid #cacaca;height: 500px;overflow:auto;}
+
+.read a, .read {color:#777777;}
+.unread a, .unread {color:green;margin-left:15px;}
+#navigation{padding-bottom:20px;margin-left:15px;}
+.listing_title{
+  font-weight:bold;
+  font-size:12px;
+}

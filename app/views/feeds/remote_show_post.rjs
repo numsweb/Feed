@@ -1,5 +1,0 @@
-page.replace_html "show_posting", :partial => "feeds/show_post"
-page.visual_effect :highlight, "show_posting",  :duration => 1.25
-if params[:called_from]== "show_feeds"
-  page.replace_html "feeds_list", :partial => "feeds/feeds_list", :locals => {:feeds => @feeds}
-end

@@ -1,8 +1,0 @@
-<%= mail_to(@email, "Please use this link to send mail",  :subject => "Your Craigslist posting " + @email.to_s, :cc => "John.Kropka@gmail.com", 
-	:body => @feed_body) %>
-
-
-<h1 style="margin-left:1px;">Original Posting</h1>
-<div id="posting">
-	<%= @feed_body %>
-</div>
