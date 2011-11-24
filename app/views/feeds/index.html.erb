@@ -1,7 +1,7 @@
 <span class="unread" id="unread_count">Unread: <%= @unread_count %> </span>
 
 <div id="navigation">
-  <%= link_to "Unread", root_path %> | <%= link_to "Read", root_path(:type => "read") %> | <%= link_to "All", root_path(:type => "all") %>
+  <%= link_to "Unread", feeds_path %> | <%= link_to "Read", feeds_path(:type => "read") %> | <%= link_to "All", feeds_path(:type => "all") %>
 </div>
 
 <div id="container">
