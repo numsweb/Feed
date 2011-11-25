@@ -19,11 +19,14 @@ class FeedsController < ApplicationController
     if params[:type]
       if params[:type]=="all"
         @feeds = Feed.all
+        session[:type]="all"
       elsif params[:type] == "read"
         @feeds = Feed.read
+        session[:type]="read"
       end
     else
       @feeds = Feed.unread
+      session[:type]="unread"
     end
     
     @read_count = Feed.read.count.to_s
@@ -34,7 +37,13 @@ class FeedsController < ApplicationController
     @feed=Feed.find(params[:id])
     @feed.is_read=true
     @feed.save
-    @feeds = Feed.unread
+    if session[:type]=="unread"
+      @feeds = Feed.unread
+    elsif session[:type]=="read"
+      @feeds = Feed.read
+    else
+      @feeds=Feed.find(:all)
+    end
     @read_count = Feed.read.count.to_s
     @unread_count = Feed.unread.count.to_s
   end
