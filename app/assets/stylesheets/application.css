@@ -5,3 +5,31 @@
  *= require_self
  *= require_tree . 
 */
+
+
+#flash_notice {
+  background-color: #FFF8C6;
+  border: solid 1px #FFA500;
+  color: #FFA500;
+  padding:5px;
+  font-size:16px;
+  padding-left:10px;
+}
+
+#flash_info {
+  background-color: #EFE;
+  border: solid 1px #347235;
+  color: #347235;
+  padding:5px;
+  font-size:16px;
+  padding-left:10px;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FDD;
+  color:	#C11B17;
+  border: solid 1px 	#C11B17;
+  padding:5px;
+  font-size:16px;
+  padding-left:10px;
+}

@@ -1,7 +1,9 @@
 ClParser::Application.routes.draw do
-  resources :feeds
+  
 
   get "feeds/index"
+  get "feeds/search" => "feeds#search", :as => "search"
+  resources :feeds
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

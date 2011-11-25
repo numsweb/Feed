@@ -10,4 +10,14 @@ class Feed < ActiveRecord::Base
     end
   end
   
+  def self.search(item)
+    parts = item.split(' ')
+    conditions = []
+    parts.each do |part|
+      conditions << "title like '%#{part}%'"
+    end
+    search_conditions = conditions.join(" OR ")
+    @feeds=Feed.find(:all, :conditions => search_conditions)
+  end
+  
 end
