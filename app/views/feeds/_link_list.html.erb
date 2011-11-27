@@ -4,6 +4,6 @@
      <tr><td class=<%=feed.is_read ?  "read" :"unread" %> ><%= link_to(feed.display_title, feed, :remote => true) %></td></tr>
    <% end %>
   <% else %>
-    <tr><td>No feeds found </td></tr>
+    <tr><td>No postings match your request. </td></tr>
   <% end %>
 </table>
