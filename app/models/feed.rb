@@ -1,6 +1,6 @@
 class Feed < ActiveRecord::Base
-  scope :unread, :conditions => ["is_read = ?", false]
-  scope :read, :conditions => ["is_read = ?", true]
+  scope :unread, :conditions => ["is_read = ?", false], :order => "id DESC"
+  scope :read, :conditions => ["is_read = ?", true], :order => "id DESC"
   include ActionView::Helpers::SanitizeHelper
   
   def display_title
@@ -18,7 +18,7 @@ class Feed < ActiveRecord::Base
       conditions << "title like '%#{part}%'"
     end
     search_conditions = conditions.join(" OR ")
-    @feeds=Feed.find(:all, :conditions => search_conditions)
+    @feeds=Feed.find(:all, :conditions => search_conditions, :order => "id DESC")
   end
   
 end

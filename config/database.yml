@@ -26,7 +26,7 @@ production:
   pool: 5
   username: rails
   password: rails_rocks
-  database: cl_parser_production
+  database: cl_parser_development
 
 
 

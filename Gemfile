@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 gem 'mysql'
 gem 'feedzirra'
+#gem 'ruby-prof'
+gem  'ruby-debug'
 
 
 # Bundle edge Rails instead:

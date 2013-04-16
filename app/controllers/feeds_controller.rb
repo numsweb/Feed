@@ -11,9 +11,12 @@ class FeedsController < ApplicationController
         listing.entries.each do |entry|
           feed=Feed.find_by_feed_url(entry.url)
           if feed.blank?
-            feed=Feed.create(:title => entry.title, :feed_url => entry.url,
+            begin
+              feed=Feed.create(:title => entry.title, :feed_url => entry.url,
                           :published => entry.published,
                           :summary => entry.summary.sanitize)
+            rescue
+            end
           end
         end
       end
@@ -44,7 +47,7 @@ class FeedsController < ApplicationController
     elsif session[:type]=="read"
       @feeds = Feed.read
     else
-      @feeds=Feed.find(:all)
+      @feeds=Feed.all
     end
     unless session[:search_item].blank?
       @feeds = Feed.search(session[:search_item])
