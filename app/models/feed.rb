@@ -16,6 +16,8 @@ class Feed < ActiveRecord::Base
     conditions = []
     parts.each do |part|
       conditions << "title like '%#{part}%'"
+      conditions << "summary like '%#{part}%'"
+      conditions << "feed_url like '%#{part}%'"
     end
     search_conditions = conditions.join(" OR ")
     @feeds=Feed.find(:all, :conditions => search_conditions, :order => "id DESC")

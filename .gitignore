@@ -3,3 +3,5 @@
 *.sqlite
 /tmp/*
 tmp/*
+.bundle
+.idea
