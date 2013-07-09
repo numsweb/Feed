@@ -5,6 +5,7 @@ gem 'mysql'
 gem 'feedzirra'
 #gem 'ruby-prof'
 gem  'ruby-debug'
+gem 'thin'
 
 
 # Bundle edge Rails instead:
