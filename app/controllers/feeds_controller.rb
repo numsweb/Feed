@@ -7,7 +7,7 @@ class FeedsController < ApplicationController
      
       FEED_URLS.each do |url|
         begin
-          Timeout::timeout(10) do
+          Timeout::timeout(30) do
             entry = Feedzirra::Feed.fetch_and_parse(url,{ :max_redirects => 3 })
             feed=Feed.find_by_feed_url(entry.url)
             if feed.blank?
@@ -21,6 +21,7 @@ class FeedsController < ApplicationController
           end
         rescue Timeout::Error
           Rails.logger.info "fetch timed out for #{url}"
+        rescue
         end
       end
     end
