@@ -1,3 +1,4 @@
+#use ruby 1.8.7 to run this application.
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
