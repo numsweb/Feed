@@ -30,7 +30,7 @@ class FeedsController < ApplicationController
 
       if params[:type]
         if params[:type]=="all"
-          @feeds = Feed.all
+          @feeds = Feed.all_items
           session[:type]="all"
         elsif params[:type] == "read"
           @feeds = Feed.read
@@ -61,6 +61,9 @@ class FeedsController < ApplicationController
     end
     @read_count = Feed.read.count.to_s
     @unread_count = Feed.unread.count.to_s
+    #because items are shown created_at desc
+    @previous_feed = Feed.find(@feed.id + 1) rescue nil
+    @next_feed = Feed.find(@feed.id - 1) rescue nil
   end
   
   def search

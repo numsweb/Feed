@@ -1,6 +1,19 @@
  <table>
-    <tr><td class="listing_title"><%= sanitize(@feed.title) %> </td></tr>
-    <tr><td><%= sanitize(@feed.summary)%> </td></tr>
-    <tr><td><%= @feed.published%> </td></tr>
-    <tr><td><%= link_to "Original Item", @feed.feed_url,  html_options = {:target => :blank }%> </td></tr>
+   <tr><td>
+     <span class="unread" id="unread_count">Unread: <%= @unread_count %> </span>
+     <%= link_to("Previous Item", feed_path(@previous_feed)) unless @previous_feed.blank?%>
+     <%= link_to("Next Item", feed_path(@next_feed)) unless @next_feed.blank?%>
+     <%= link_to("Back to List", feeds_path) %>
+     <br/><br/>
+   </td></tr>
+    <tr><td class="listing_title"><%= @feed.title.html_safe %> </td></tr>
+    <tr><td class="listing-summary"><%= sanitize(@feed.summary)%>
+   <tr><td>Published at: <%= @feed.published%> </td></tr>
+      <br/>
+   <tr><td>
+      <%= link_to "Original item (opens in new window)", @feed.feed_url,  html_options = {:target => :blank }%>
+    </td></tr>
+
+
  </table>
+

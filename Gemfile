@@ -1,11 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-gem 'mysql'
-gem 'feedzirra'
+gem 'mysql2'
+gem 'feedjira'
 #gem 'ruby-prof'
-gem  'ruby-debug'
-gem 'thin'
+#gem  'ruby-debug19'
+gem 'debugger'
+#gem 'thin'
+gem 'eventmachine', '1.0.0'
+
+
+
 
 
 # Bundle edge Rails instead:
@@ -23,7 +28,8 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', "~> 2.3.0"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

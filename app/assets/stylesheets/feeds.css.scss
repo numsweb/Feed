@@ -13,7 +13,7 @@
 #search{float:right;margin-right:35px;width:610px;}
 .listing_title{
   font-weight:bold;
-  font-size:12px;
+  font-size:16px;
 }
 
 .clear{
@@ -22,4 +22,11 @@
 
 #search_button{
   margin-left:20px;
+}
+
+.listing-summary{
+  border:1px solid #eaeaea;
+  width:800px;
+  height:150px;
+  ocerflow:scroll;
 }

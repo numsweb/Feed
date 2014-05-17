@@ -1,6 +1,7 @@
 class Feed < ActiveRecord::Base
   scope :unread, :conditions => ["is_read = ?", false], :order => "id DESC"
   scope :read, :conditions => ["is_read = ?", true], :order => "id DESC"
+  scope :all_items, :order => "id DESC"
   include ActionView::Helpers::SanitizeHelper
   
   def display_title
