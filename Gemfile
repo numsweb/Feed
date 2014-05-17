@@ -1,4 +1,5 @@
 #use ruby 1.8.7 to run this application.
+#this is the ubuntu branch which still uses 1.87. ruby
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
