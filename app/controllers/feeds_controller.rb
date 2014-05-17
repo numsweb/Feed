@@ -8,7 +8,7 @@ class FeedsController < ApplicationController
       FEED_URLS.each do |url|
         begin
           Timeout::timeout(30) do
-            feed = Feedzirra::Feed.fetch_and_parse(url,{ :max_redirects => 3 })
+            feed = Feedjira::Feed.fetch_and_parse(url,{ :max_redirects => 3 })
             feed.entries.each do |entry|
               feed=Feed.find_by_feed_url(entry.url)
               if feed.blank?
