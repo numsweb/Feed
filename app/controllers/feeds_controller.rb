@@ -61,9 +61,6 @@ class FeedsController < ApplicationController
     end
     @read_count = Feed.read.count.to_s
     @unread_count = Feed.unread.count.to_s
-    #because items are shown created_at desc
-    @previous_feed = Feed.find(@feed.id + 1) rescue nil
-    @next_feed = Feed.find(@feed.id - 1) rescue nil
   end
   
   def search

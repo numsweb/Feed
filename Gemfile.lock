@@ -131,7 +131,7 @@ DEPENDENCIES
   debugger
   eventmachine (= 1.0.0)
   feedjira
-  jquery-rails (~> 2.3.0)
+  jquery-rails
   json
   mysql2
   rails (= 3.1.0)
