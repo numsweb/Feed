@@ -1,4 +1,2 @@
 module FeedsHelper
-  
- 
 end

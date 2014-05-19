@@ -1,43 +1,7 @@
 
-<div id="nav_search">
-  <table>
-    <tr>
-      <td>
-        <span class="unread" id="unread_count">Unread: <%= @unread_count %> </span>
-      </td>
-      <td>
-        <div id="navigation">
-          <%= link_to "Unread", feeds_path %> | <%= link_to "Read", feeds_path(:type => "read") %> | <%= link_to "All", feeds_path(:type => "all") %>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      
-      <td colspan=2>
-  
-        <div id="search">
-          <%= form_for("search", :url => search_path, :method => :get) do |f| %>
-            <p><%= f.text_field "item" %><span id="search_button"><%= f.submit "Search" %></span></p>
-          <% end %>
-      </td>
-    </tr>
-  </table>
-  </div>
-</div>
-<div class="clear"></div>
-
-<div id="container">
-  <div id="link_list">
-    <% unless  @search_item.blank? %>
-      <% @feeds = Feed.search(@search_item) %>
-    <% end %>
-    <%= render :partial => "link_list", :locals => {:feeds => @feeds} %>
-  </div>
-  
-  <div id="hideable_content">
-    <div id="show_item">
-      << Click on a link to the left to show the posting (gray items = read, green = unread)
-    </div>
+<div id="hideable_content" class="well">
+  <div id="show_item">
+    << Click on a link to the left to show the posting (gray items = read, green = unread)
   </div>
 </div>
 

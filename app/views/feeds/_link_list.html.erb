@@ -1,11 +1,14 @@
- <table>
-  <% unless @feeds.blank? %>
-   <% @feeds.each do |feed| %>
-     <tr><td class=<%=feed.is_read ?  "read" :"unread" %> >
-       <%= link_to(feed.display_title, feed, :remote => true) %>
-     </td></tr>
-   <% end %>
-  <% else %>
-    <tr><td>No postings match your request. </td></tr>
-  <% end %>
-</table>
+<div id="link_list">
+  <ul class="nav nav-list">
+    <li class="nav-header">Postings</li>
+    <% unless @feeds.blank? %>
+      <% @feeds.each do |feed| %>
+          <li class=<%=feed.is_read ?  "read" :"unread" %> >
+            <%= link_to(feed.display_title, feed, :remote => true) %>
+          </li>
+      <% end %>
+    <% else %>
+      <li>No postings match your request. </li>
+    <% end %>
+  </ul>
+</div>
