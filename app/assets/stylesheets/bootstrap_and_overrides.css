@@ -9,7 +9,6 @@
 
 .sidebar-nav{
     height:500px;
-    width: 450px;
     overflow-y:auto;
     overflow-x:hidden;
 }
