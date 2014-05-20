@@ -1,7 +1,7 @@
 BootstrapFeed::Application.routes.draw do
 
   resources :feeds
-  get 'feeds/search' => 'feeds#search', :as => 'search'
+  get 'search' => 'feeds#search', :as => 'search'
 
   get 'feeds_all/:type' => 'feeds#index', :as => 'feeds_all'
 

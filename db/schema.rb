@@ -11,15 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519155403) do
+ActiveRecord::Schema.define(version: 20140520184753) do
+
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "feeds", force: true do |t|
     t.string   "title"
+    t.string   "feed_url"
     t.datetime "published"
     t.text     "summary"
-    t.datetime "created_at"
     t.boolean  "is_read",    default: false
+    t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "feeds", ["title", "published"], name: "index_feeds_on_title_and_published", using: :btree
 
 end
