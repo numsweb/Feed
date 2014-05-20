@@ -5,11 +5,7 @@ class FeedsController < ApplicationController
   # GET /feeds.json
   def index
 
-    #use delayed job to fetch new feeds...
-    Rails.logger.info "Launching job to fetch feeds ..."
-    fetcher = FeedFetcherJob.new
-    fetcher.delay.perform
-    Rails.logger.info "delayed job launched!"
+
 
     if params[:type] && params[:type]=="all"
       @feeds = Feed.all_items
@@ -18,6 +14,12 @@ class FeedsController < ApplicationController
       @feeds = Feed.read
       session[:type]="read"
     else
+      #use delayed job to fetch new feeds, but they will not be available until next page load....
+      Rails.logger.info "********************************************************\nLaunching job to fetch feeds ...\n********************************************************"
+      fetcher = FeedFetcherJob.new
+      fetcher.delay.perform
+      Rails.logger.info "********************************************************\ndelayed job launched!\n********************************************************"
+
       @feeds = Feed.unread
       session[:type]="unread"
     end
