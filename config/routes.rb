@@ -1,6 +1,9 @@
 BootstrapFeed::Application.routes.draw do
+
   resources :feeds
-  get "feeds/search" => "feeds#search", :as => "search"
+  get 'feeds/search' => 'feeds#search', :as => 'search'
+
+  get 'feeds_all/:type' => 'feeds#index', :as => 'feeds_all'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -38,10 +38,13 @@ class FeedsController < ApplicationController
       elsif params[:type] == "read"
         @feeds = Feed.read
         session[:type]="read"
+      else
+        @feeds = Feed.unread
+        session[:type]="unread"
       end
     else
-      @feeds = Feed.unread
-      session[:type]="unread"
+      @feeds = Feed.all_items
+      session[:type]="all"
     end
     session[:search_item]=nil
     @read_count = Feed.read.count.to_s
