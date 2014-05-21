@@ -14,12 +14,6 @@ class FeedsController < ApplicationController
       @feeds = Feed.read
       session[:type]="read"
     else
-      #use delayed job to fetch new feeds, but they will not be available until next page load....
-      Rails.logger.info "********************************************************\nLaunching job to fetch feeds ...\n********************************************************"
-      fetcher = FeedFetcherJob.new
-      fetcher.delay.perform
-      Rails.logger.info "********************************************************\ndelayed job launched!\n********************************************************"
-
       @feeds = Feed.unread
       session[:type]="unread"
     end
@@ -60,6 +54,16 @@ class FeedsController < ApplicationController
       flash[:error] = "Please enter something to search for!"
       redirect_to feeds_path and return
     end
+  end
+
+  def delayed_fetch
+    #use delayed job to fetch new feeds, but they will not be available until next page load....
+    Rails.logger.info "********************************************************\nLaunching job to fetch feeds ...\n********************************************************"
+    fetcher = FeedFetcherJob.new
+    fetcher.delay.perform
+    Rails.logger.info "********************************************************\ndelayed job launched!\n********************************************************"
+    flash[:notice] = "Feeds fetching process launched"
+    redirect_to root_path
   end
 
   private

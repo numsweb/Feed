@@ -76,6 +76,10 @@
               <%= form_for("search", :url => "/search", :method => :get) do |f| %>
                   <p><%= f.text_field "item" %><span id="search_button"><%= f.submit "Search" %></span></p>
               <% end %>
+            </div>
+          </td>
+          <td>
+            <%= render :partial => "feeds/fetch_form" %>
           </td>
         </tr>
       </table>

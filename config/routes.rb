@@ -4,6 +4,7 @@ BootstrapFeed::Application.routes.draw do
   get 'search' => 'feeds#search', :as => 'search'
 
   get 'feeds_all/:type' => 'feeds#index', :as => 'feeds_all'
+  post 'delayed_fetch' => 'feeds#delayed_fetch', :as => 'delayed_fetch'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
