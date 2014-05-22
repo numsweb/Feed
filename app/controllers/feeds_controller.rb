@@ -4,9 +4,6 @@ class FeedsController < ApplicationController
   # GET /feeds
   # GET /feeds.json
   def index
-
-
-
     if params[:type] && params[:type]=="all"
       @feeds = Feed.all_items
       session[:type]="all"
@@ -17,8 +14,6 @@ class FeedsController < ApplicationController
       @feeds = Feed.unread
       session[:type]="unread"
     end
-
-
     session[:search_item]=nil
     @read_count = Feed.read.count.to_s
     @unread_count = Feed.unread.count.to_s
@@ -35,7 +30,7 @@ class FeedsController < ApplicationController
     elsif session[:type]=="read"
       @feeds = Feed.read
     else
-      @feeds=Feed.all
+      @feeds=Feed.all_items
     end
     unless session[:search_item].blank?
       @feeds = Feed.search(session[:search_item])

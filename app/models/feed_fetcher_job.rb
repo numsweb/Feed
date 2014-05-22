@@ -9,7 +9,7 @@ class FeedFetcherJob
             feed=Feed.find_by_feed_url(entry.url)
             if feed.blank?
               begin
-                feed=Feed.create(:title => url[0] + "::" + entry.title, :feed_url => entry.url,
+                feed=Feed.create(:title => url[0] + " - " + entry.title, :feed_url => entry.url,
                                  :published => entry.published,
                                  :summary => entry.summary.sanitize)
               rescue

@@ -6,10 +6,10 @@ class Feed < ActiveRecord::Base
   include ActionView::Helpers::SanitizeHelper
 
   def display_title
-    if title.size < 51
+    if title.size < 65
       return sanitize(title)
     else
-      return sanitize(title[0..50]) + "..."
+      return sanitize(title[0..65]) + "..."
     end
   end
 
@@ -22,6 +22,6 @@ class Feed < ActiveRecord::Base
       conditions << "feed_url like '%#{part}%'"
     end
     search_conditions = conditions.join(" OR ")
-    @feeds=Feed.find(:all, :conditions => search_conditions, :order => "id DESC")
+    @feeds=Feed.all(:conditions => search_conditions, :order => "id DESC")
   end
 end
