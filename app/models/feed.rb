@@ -1,8 +1,9 @@
 class Feed < ActiveRecord::Base
+  default_scope order('created_at DESC')
 
-  scope :unread, :conditions => ["is_read = ?", false], :order => "id DESC"
-  scope :read, :conditions => ["is_read = ?", true], :order => "id DESC"
-  scope :all_items, :order => "id DESC"
+  scope :unread, -> {where(is_read: false)}
+  scope :read, -> {where(is_read: true)}
+  scope :all_items, order: 'id DESC'
   include ActionView::Helpers::SanitizeHelper
 
   def display_title
