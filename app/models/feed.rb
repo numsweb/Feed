@@ -1,10 +1,20 @@
 class Feed < ActiveRecord::Base
-  default_scope order('created_at DESC')
+ #default_scope where{'created_at DESC'}
 
-  scope :unread, -> {where(is_read: false)}
-  scope :read, -> {where(is_read: true)}
-  scope :all_items, order: 'id DESC'
+
   include ActionView::Helpers::SanitizeHelper
+  
+  def self.unread
+    where(is_read: false).order('created_at DESC')
+  end
+  
+  def self.read
+    where(is_read: true).order('created_at DESC')
+  end
+  
+  def self.all_items
+    all.order('created_at DESC')    
+  end
 
   def display_title
     if title.size < 65
