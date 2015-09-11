@@ -14,6 +14,7 @@ gem 'feedjira'
 gem 'eventmachine', '1.0.0'
 #gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
 gem 'delayed_job_active_record'
+gem 'therubyracer'
 
 
 # Use SCSS for stylesheets
