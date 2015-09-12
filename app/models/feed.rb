@@ -32,7 +32,8 @@ class Feed < ActiveRecord::Base
       conditions << "summary like '%#{part}%'"
       conditions << "feed_url like '%#{part}%'"
     end
+
     search_conditions = conditions.join(" OR ")
-    @feeds=Feed.all(:conditions => search_conditions, :order => "id DESC")
+    @feeds=Feed.all.where(search_conditions)
   end
 end
