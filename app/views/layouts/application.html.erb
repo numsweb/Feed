@@ -78,6 +78,10 @@
           </td>
           <td>
             <%= render :partial => "layouts/fetch_form" %>
+             
+          </td>
+          <td id="flash_message">
+            <%= bootstrap_flash %>
           </td>
         </tr>
       </table>
@@ -93,7 +97,7 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span4">
-          <%= bootstrap_flash %>
+         
           <%= yield %>
         </div>
       </div><!--/row-->
