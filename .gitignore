@@ -5,4 +5,9 @@
 tmp/*
 .bundle
 .idea
-/config/database.yml
+.rvmrc
+config/database.yml
+.DS_Store
+app/.DS_Store
+app/views/.DS_Store
+config/.DS_Store

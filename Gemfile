@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 
 #things I've addded
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
@@ -14,6 +14,7 @@ gem 'feedjira'
 gem 'eventmachine', '1.0.0'
 #gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
 gem 'delayed_job_active_record'
+gem 'daemons'
 gem 'therubyracer'
 
 
