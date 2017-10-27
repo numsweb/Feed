@@ -8,9 +8,8 @@ development:
   encoding: utf8
   reconnect: false
   pool: 5
-  username: rails
-  password: rails_rocks
-  #database: bootstrap_cl_parser_development
+  username: root
+  password:
   database: cl_parser_development
 
 # Warning: The database defined as "test" will be erased and
