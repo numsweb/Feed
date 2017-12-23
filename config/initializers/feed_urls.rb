@@ -4,21 +4,21 @@ FEED_URLS = [
     ['AugustaCraigslist','http://augusta.craigslist.org/web/index.rss'],
     ['AugustaCraigslist','http://augusta.craigslist.org/cpg/index.rss'],
     ['AugustaCraigslist','http://augusta.craigslist.org/sad/index.rss'],
+
     ['CharlestonCraigslist', 'http://charleston.craigslist.org/eng/index.rss'],
     ['CharlestonCraigslist', 'http://charleston.craigslist.org/sof/index.rss'],
     ['CharlestonCraigslist','http://charleston.craigslist.org/web/index.rss'],
     ['CharlestonCraigslist','http://charleston.craigslist.org/cpg/index.rss'],
     ['CharlestonCraigslist','http://charleston.craigslist.org/sad/index.rss'],
+
     ['ColumbiaCraigslist', 'http://columbia.craigslist.org/eng/index.rss'],
     ['ColumbiaCraigslist', 'http://columbia.craigslist.org/sof/index.rss'],
     ['ColumbiaCraigslist','http://columbia.craigslist.org/web/index.rss'],
     ['ColumbiaCraigslist','http://columbia.craigslist.org/cpg/index.rss'],
     ['ColumbiaCraigslist','http://columbia.craigslist.org/sad/index.rss'],
+ 
 
-    ['AustinCraigslist', 'http://austin.craigslist.org/sof/index.rss'],
-    ['AustinCraigslist','http://austin.craigslist.org/web/index.rss'],
-    ['AustinCraigslist','http://austin.craigslist.org/cpg/index.rss'],
-    ['AustinCraigslist','http://austin.craigslist.org/sad/index.rss'],
+
 
 
     ['RemoteRubyJobs', 'https://remoteok.io/remote-ruby-jobs.rss'],
@@ -29,3 +29,11 @@ FEED_URLS = [
     ]
 
 
+=begin
+
+    ['AustinCraigslist', 'http://austin.craigslist.org/sof/index.rss'],
+    ['AustinCraigslist','http://austin.craigslist.org/web/index.rss'],
+    ['AustinCraigslist','http://austin.craigslist.org/cpg/index.rss'],
+    ['AustinCraigslist','http://austin.craigslist.org/sad/index.rss'],
+
+=end
