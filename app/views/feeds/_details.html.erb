@@ -1,13 +1,12 @@
- <table>
+<table>
 
-    <tr><td class="listing_title"><%= @feed.title.html_safe %> </td></tr>
-    <tr><td class="listing-summary"><%= sanitize(@feed.summary)%>
-   <tr><td>Published at: <%= @feed.published%> </td></tr>
-      <br/>
-   <tr><td>
-      <%= link_to "Original item (opens in new tab)", @feed.feed_url,  html_options = {:target => :blank }%>
-    </td></tr>
+  <tr><td class="listing_title"><%= @feed.title.html_safe %> </td></tr>
+  <tr><td class="listing-summary"><%= sanitize(@feed.summary)%>
+  <tr><td>Published at: <%= @feed.published%> </td></tr>
+  <br/>
+  <tr><td>
+    <%= link_to "Original item (opens in new tab)", @feed.feed_url,  html_options = {:target => :blank }%>
+  </td></tr>
 
 
- </table>
-
+</table>

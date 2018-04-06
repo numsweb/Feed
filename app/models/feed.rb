@@ -1,19 +1,17 @@
-class Feed < ActiveRecord::Base
- #default_scope where{'created_at DESC'}
-
+class Feed < ApplicationRecord
 
   include ActionView::Helpers::SanitizeHelper
-  
+
   def self.unread
     where(is_read: false).order('created_at DESC')
   end
-  
+
   def self.read
     where(is_read: true).order('created_at DESC')
   end
-  
+
   def self.all_items
-    all.order('created_at DESC')    
+    all.order('created_at DESC')
   end
 
   def display_title
