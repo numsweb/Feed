@@ -16,6 +16,11 @@ FEED_URLS = [
     ['ColumbiaCraigslist','http://columbia.craigslist.org/web/index.rss'],
     ['ColumbiaCraigslist','http://columbia.craigslist.org/cpg/index.rss'],
     ['ColumbiaCraigslist','http://columbia.craigslist.org/sad/index.rss'],
+
+    ['AustinCraigslist', 'http://austin.craigslist.org/sof/index.rss'],
+    ['AustinCraigslist','http://austin.craigslist.org/web/index.rss'],
+    ['AustinCraigslist','http://austin.craigslist.org/cpg/index.rss'],
+    ['AustinCraigslist','http://austin.craigslist.org/sad/index.rss'],
  
 
 
