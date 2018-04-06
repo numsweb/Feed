@@ -2,11 +2,11 @@
     height:500px;
     overflow-y:auto;
     overflow-x:hidden;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 
-#hideable_content{margin-left:10px;float:left;border:1px solid #cacaca;height: 500px;overflow:auto;margin-top: 15px;}
+#hideable_content{margin-left:10px;float:left;border:1px solid #cacaca;height: 500px;overflow:auto;margin-top: 10px;}
 #show_item{margin-left:10px;}
 .read a, .read {color:#777777;}
 .unread a, .unread {color:green;margin-left:15px;}
