@@ -1,5 +1,6 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
+  layout 'application'
 
   # GET /feeds
   # GET /feeds.json
@@ -101,12 +102,23 @@ class FeedsController < ApplicationController
   end
 
   def delayed_fetch
+
     #use delayed job to fetch new feeds, but they will not be available until next page load....
     Rails.logger.info "********************************************************\nLaunching job to fetch feeds ...\n********************************************************"
-    fetcher = FeedFetcherJob.new
-    fetcher.delay.perform
-    Rails.logger.info "********************************************************\ndelayed job launched!\n********************************************************"
-    flash[:notice] = "Feeds fetching process launched"
+    if FEED_COLLECTION_AGENT == "delayed_job"
+      fetcher = FeedFetcherJob.new
+      fetcher.delay.perform
+      Rails.logger.info "********************************************************\ndelayed job launched!\n********************************************************"
+      flash[:notice] = "Feed::delayed_job fetching process launched"
+    elsif FEED_COLLECTION_AGENT == "sidekiq"
+      FetchWorker.perform_async
+      Rails.logger.info "********************************************************\nsidekiq  launched!\n********************************************************"
+      flash[:notice] = "Feed::sidekiq fetching process launched"
+    else
+      flash[:error] = "invalid FEED_COLLECTION_AGENT! Fetch aborted"
+    end
+
+
     redirect_to root_path
   end
 

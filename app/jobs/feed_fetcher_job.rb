@@ -1,6 +1,7 @@
 class FeedFetcherJob
 
   def perform
+    Rails.logger.info "***** Performing FeedFetcherJob *****"
     FEED_URLS.each do |url|
       begin
         Timeout::timeout(30) do
@@ -14,7 +15,7 @@ class FeedFetcherJob
                                  :published => entry.published,
                                  :summary => entry.summary.sanitize)
               rescue
-                rails.loggeer.info "Error processing entry: #{entry.inspect}"
+                rails.logger.info "***** Error processing entry: #{entry.inspect} *****"
               end
             end
           end
@@ -24,10 +25,7 @@ class FeedFetcherJob
       rescue
       end
     end #FEED_URLS
+    Rails.logger.info "***** Finished FeedFetcherJob *****"
   end #perform
-
-
-
-
 
 end

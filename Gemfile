@@ -32,12 +32,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'feedjira'
 gem 'delayed_job_active_record'
 gem 'daemons'
 gem 'jquery-rails'
+gem 'sidekiq'
 
 
 
@@ -61,3 +61,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# things required for sidekiq
+# redis-server --port 6379 --daemonize yes
+# #  bundle exec sidekiq

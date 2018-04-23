@@ -20,36 +20,7 @@
   <body>
     <%= render :partial => 'layouts/navbar' %>
 
-    <div id="nav_search">
-      <table>
-        <tr>
-          <td>
-            <span class="unread" id="unread_count">Unread: <%= @unread_count %> </span>
-          </td>
-          <td>
-            <div id="navigation">
-              <%= link_to "Unread", '/feeds_all/unread' %> | <%= link_to "Read", '/feeds_all/read' %> | <%= link_to "All", '/feeds_all/all' %>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td colspan=2>
-            <div id="search">
-              <%= render :partial => "layouts/search_form" %>
-            </div>
-          </td>
-        <td>
-          <%= render :partial => "layouts/fetch_form" %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="5">
-          <div class="fright">This website is running <b>Rails: <%= Rails::VERSION::STRING %></b> &copy; John Kropka 2014-2018 </div>
-        </td>
 
-      </tr>
-    </table>
-  </div>
     <div class="container-fluid ">
       <% flash.each do |name, msg| %>
         <br/>
@@ -59,16 +30,10 @@
         <% end %>
       <% end %>
       <div class="row-fluid">
-        <div class="col-lg-4">
-          <div class="well job_details">
-            <%= render :partial => "feeds/link_list", :feeds => @feeds %>
-          </div><!--/.well -->
-        </div><!--/span5-->
-        <div class="col-lg-6">
+        <div class="col-lg-10">
           <%= yield %>
         </div>
+      </div>
     </div>
   </body>
 </html>
-
-
