@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Starting sidekiq
+1. Start redis with 'redis-server --port 6379 --daemonize yes'
+2. Start sidekiq with 'bundle exec sidekiq'
